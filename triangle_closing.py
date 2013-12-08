@@ -1,5 +1,7 @@
 from snap import *
 import random,collections
+import graph_derivative
+
 
 def create_test_graph(num_nodes,num_edges,test_edge_prob):
 	G2 = GenRndGnm(PNGraph,num_nodes,num_edges)
@@ -49,5 +51,8 @@ def count_triangles(G2,E):
 	return dist_counter,tri_type_counter
 
 if __name__ == "__main__":
-	G,E = create_test_graph(100,1000,0.05)
-	count_triangles(G,E)
+	# G,E = create_test_graph(100,1000,0.05)
+	G1 = LoadEdgeList(PNGraph,'../snapshot030701.txt')
+	G2 = LoadEdgeList(PNGraph,'../snapshot030801.txt')
+	E = graph_derivative.derivative(G1,G2)
+	count_triangles(G2,E)
