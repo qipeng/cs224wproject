@@ -1,0 +1,4 @@
+in-degree -> in edge: 0.92
+out-degree -> out edge: 0.94
+degree -> in edge: 1.08
+pr -> in edge: 1.00
