@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{kossinets2006empirical}
+Gueorgi Kossinets and Duncan~J Watts.
+\newblock Empirical analysis of an evolving social network.
+\newblock {\em Science}, 311(5757):88--90, 2006.
+
+\bibitem{kumar2010structure}
+Ravi Kumar, Jasmine Novak, and Andrew Tomkins.
+\newblock Structure and evolution of online social networks.
+\newblock In {\em Link Mining: Models, Algorithms, and Applications}, pages
+  337--357. Springer, 2010.
+
+\bibitem{leskovec2008microscopic}
+Jure Leskovec, Lars Backstrom, Ravi Kumar, and Andrew Tomkins.
+\newblock Microscopic evolution of social networks.
+\newblock In {\em Proceedings of the 14th ACM SIGKDD international conference
+  on Knowledge discovery and data mining}, pages 462--470. ACM, 2008.
+
+\bibitem{zlatic2011model}
+Vinko Zlati{\'c} and Hrvoje {\v{S}}tefan{\v{c}}i{\'c}.
+\newblock Model of wikipedia growth based on information exchange via
+  reciprocal arcs.
+\newblock {\em EPL (Europhysics Letters)}, 93(5):58005, 2011.
+
+\end{thebibliography}
