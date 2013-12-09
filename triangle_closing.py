@@ -46,13 +46,20 @@ def count_triangles(G2,E):
 			continue
 		dist_counter['3+'] += 1
 
+	seperated_counter = collections.Counter()
+	seperated_counter[1] = tri_type_counter['1'] + tri_type_counter['1+2'] + tri_type_counter['1+3'] + tri_type_counter['1+4'] + tri_type_counter['1+2+3'] + tri_type_counter['1+2+4'] + tri_type_counter['1+3+4'] + tri_type_counter['1+2+3+4']
+	seperated_counter[2] = tri_type_counter['2'] + tri_type_counter['1+2'] + tri_type_counter['2+3'] + tri_type_counter['2+4'] + tri_type_counter['1+2+3'] + tri_type_counter['1+2+4'] + tri_type_counter['2+3+4'] + tri_type_counter['1+2+3+4']
+	seperated_counter[3] = tri_type_counter['3'] + tri_type_counter['1+3'] + tri_type_counter['2+3'] + tri_type_counter['3+4'] + tri_type_counter['1+2+3'] + tri_type_counter['1+3+4'] + tri_type_counter['2+3+4'] + tri_type_counter['1+2+3+4']
+	seperated_counter[4] = tri_type_counter['4'] + tri_type_counter['1+4'] + tri_type_counter['2+4'] + tri_type_counter['3+4'] + tri_type_counter['1+2+4'] + tri_type_counter['1+3+4'] + tri_type_counter['2+3+4'] + tri_type_counter['1+2+3+4']
+
 	print 'distances: ', dist_counter
 	print 'triangle types: ', tri_type_counter
-	return dist_counter,tri_type_counter
+	print 'seperated triangle types: ', seperated_counter
+	return dist_counter,tri_type_counter,seperated_counter
 
 if __name__ == "__main__":
 	# G,E = create_test_graph(100,1000,0.05)
-	G1 = LoadEdgeList(PNGraph,'../snapshot030701.txt')
-	G2 = LoadEdgeList(PNGraph,'../snapshot030801.txt')
+	G1 = LoadEdgeList(PNGraph,'../wiki_week/ssredirect050704.txt')
+	G2 = LoadEdgeList(PNGraph,'../wiki_week/ssredirect050707.txt')
 	E = graph_derivative.derivative(G1,G2)
 	count_triangles(G2,E)

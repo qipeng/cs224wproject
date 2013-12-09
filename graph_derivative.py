@@ -17,6 +17,6 @@ def derivative(G1,G2):
 	return E
 
 if __name__ == "__main__":
-	G1 = LoadEdgeList(PNGraph,'../snapshot030701.txt')
-	G2 = LoadEdgeList(PNGraph,'../snapshot030801.txt')
+	G1 = LoadEdgeList(PNGraph,'../snapshot020701.txt')
+	G2 = LoadEdgeList(PNGraph,'../snapshot020801.txt')
 	derivative(G1,G2)
