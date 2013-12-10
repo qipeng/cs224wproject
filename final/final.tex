@@ -57,21 +57,23 @@ A snapshot is a static view of an evolving network at a certain point in time. A
 \item Connected component sizes.
 \end{enumerate}
 
-On one hand, looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. On the other hand, by comparing these statistic over many snapshots through time, we can start to look for trends as the network develops. We try to choose the interval between snapshots so that the snapshots are close enough to fully present the developmental stages of the network, while taking into account the limits of computation and memory. After generation and calculation, we visualize out results to show our findings more clearly. The results are as follows:
+Looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. By comparing these statistics over many snapshots through time, we look for trends as the network develops. The interval between snapshots was chosen so that the snapshots are close enough to fully present the developmental stages of the network. The results are as follows:
 
 \subsection{Number of Nodes and Edges}
-From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It can be further observed that the number of both Wikipedia's nodes and its edges grow by about an order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the number of nodes and edges in Wikipedia follows a rough linear ratio in their growth, indicating that Wikipedia is similar to a scale-free network. 
+From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It it further observed that the number of Wikipedia's nodes and edges grow by one order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the ratio of nodes to edges roughly follow a linear pattern throughout Wikipedia's growth.
 
-A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the legends, or the red lines/points) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
+A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the graphs) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
 
 \begin{figure*}
 \centering{
-\includegraphics[width=0.33\textwidth]{./graphs/p1-1}\includegraphics[width=0.33\textwidth]{./graphs/p1-2}\includegraphics[width=0.33\textwidth]{./graphs/p2-1}
+\includegraphics[width=0.3\textwidth]{./graphs/p1-1}\includegraphics[width=0.3\textwidth]{./graphs/p1-2}\includegraphics[width=0.3\textwidth]{./graphs/p2-1}
 }
-\caption{Growth of Network over Time \label{fig:growth}}
+\caption{Number of Nodes and Edges over Time \label{fig:growth}}
 \end{figure*}
 
 \subsection{Degree Distribution}
+Fig.~\ref{fig:degree} shows the degree, in-degree and out-degree distribution of nodes in our graph over time.
+
 \begin{figure*}
 \centering{
 \includegraphics[width=0.33\textwidth]{./graphs/degree}\includegraphics[width=0.33\textwidth]{./graphs/indegree}\includegraphics[width=0.33\textwidth]{./graphs/outdegree}
@@ -81,11 +83,11 @@ A closer observation on the linear scale graph revealed a significant difference
 
 
 \subsection{Diameter}
-Further analysis of Wikipedia's evolution of diameter reveals an interesting phenomenon. As Fig.~\ref{fig:diameter} shows, the diameter of graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization further endorses our observation that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
+As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization shows that the diameter of our Wikipedia network does not increase as its nodes and edges increase, and that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
 
 \begin{figure}[H]
 \centering{
-\includegraphics[width=0.5\linewidth]{./graphs/p2-2}
+\includegraphics[width=0.8\linewidth]{./graphs/p2-2}
 }
 \caption{Change of Diameter over Time\label{fig:diameter}}
 \end{figure}
