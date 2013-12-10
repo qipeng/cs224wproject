@@ -93,7 +93,7 @@ As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, 
 \end{figure}
 
 \subsection{Connected Component Sizes}
-Besides those common benchmarks above, we also investigated the change of Wikipedia's connected component sizes over time, which might lend some insight to the difference between the difference between typical social networks and knowledge networks like Wikipedia (more comparison to social networks will be required to draw a conclusion). To investigate the huge difference in SCC sizes before and after redirection processing, we analyzed the portion of redirection nodes that are inside the largest SCC. As it turned out, only about 40\% of the removed redirection nodes are from the largest SCC, which suggest that redirection pages occur more in the in-component, out-component, and disjoint component of the largest SCC. This would require further investigation of the general structure of the Wikipedia network during the rest of our project.
+We also looked at Wikipedia's connected component sizes over time. We found that the size of the largest Strongly Connected Component dropped significantly after we removed redirection chains. To investigate this huge difference, we looked at the portion of redirection nodes that were inside the largest SCC. As it turned out, only about 40\% of the nodes removed after processing redirection nodes were from inside the largest SCC, which suggests that redirection pages occur more often in the in-component, out-component, and disjoint component of the network. This lends some insight into the general structure of the Wikipedia network.
 
 \begin{figure}[H]
 \centering{
