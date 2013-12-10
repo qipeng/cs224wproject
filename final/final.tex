@@ -55,17 +55,50 @@ A snapshot is a static view of an evolving network at a certain point in time. A
 \item Degree distributions, including in-degree and out-degree.
 \item Diameter (sampling from a subset of nodes for efficiency).
 \item Connected component sizes.
-\item Average clustering coefficient.
 \end{enumerate}
 
 On one hand, looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. On the other hand, by comparing these statistic over many snapshots through time, we can start to look for trends as the network develops. We try to choose the interval between snapshots so that the snapshots are close enough to fully present the developmental stages of the network, while taking into account the limits of computation and memory. After generation and calculation, we visualize out results to show our findings more clearly. The results are as follows:
 
-\subsection{Degree Distribution}
+\subsection{Number of Nodes and Edges}
+From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It can be further observed that the number of both Wikipedia's nodes and its edges grow by about an order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the number of nodes and edges in Wikipedia follows a rough linear ratio in their growth, indicating that Wikipedia is similar to a scale-free network. 
+
+A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the legends, or the red lines/points) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
+
+\begin{figure*}
+\centering{
+\includegraphics[width=0.33\textwidth]{./graphs/p1-1}\includegraphics[width=0.33\textwidth]{./graphs/p1-2}\includegraphics[width=0.33\textwidth]{./graphs/p2-1}
+}
+\caption{Growth of Network over Time \label{fig:growth}}
+\end{figure*}
 
 \subsection{Degree Distribution}
+\begin{figure*}
+\centering{
+\includegraphics[width=0.33\textwidth]{./graphs/degree}\includegraphics[width=0.33\textwidth]{./graphs/indegree}\includegraphics[width=0.33\textwidth]{./graphs/outdegree}
+}
+\caption{Degree, In-Degree and Out-Degree Distributions over Time \label{fig:degree}}
+\end{figure*}
 
-\subsection{Degree Distribution}
 
+\subsection{Diameter}
+Further analysis of Wikipedia's evolution of diameter reveals an interesting phenomenon. As Fig.~\ref{fig:diameter} shows, the diameter of graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization further endorses our observation that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
+
+\begin{figure}[H]
+\centering{
+\includegraphics[width=0.5\linewidth]{./graphs/p2-2}
+}
+\caption{Change of Diameter over Time\label{fig:diameter}}
+\end{figure}
+
+\subsection{Connected Component Sizes}
+Besides those common benchmarks above, we also investigated the change of Wikipedia's connected component sizes over time, which might lend some insight to the difference between the difference between typical social networks and knowledge networks like Wikipedia (more comparison to social networks will be required to draw a conclusion). To investigate the huge difference in SCC sizes before and after redirection processing, we analyzed the portion of redirection nodes that are inside the largest SCC. As it turned out, only about 40\% of the removed redirection nodes are from the largest SCC, which suggest that redirection pages occur more in the in-component, out-component, and disjoint component of the largest SCC. This would require further investigation of the general structure of the Wikipedia network during the rest of our project.
+
+\begin{figure}[H]
+\centering{
+\includegraphics[width=0.5\linewidth]{./graphs/p3-1}\includegraphics[width=0.5\linewidth]{./graphs/p3-2}
+}
+\caption{Change of Connected Component Sizes \label{fig:cc}}
+\end{figure}
 
 \section{Dynamic Analysis}
 \vspace{10pt}
@@ -75,7 +108,7 @@ After we generate snapshots and analyze properties of the whole network, we move
 We study individual edge creation processes in the following way: Note that if we take two snapshots of the network in a short period of time, the vast majority of nodes and edges will not have changed. If the interval is sufficiently short, there will only be a small amount of changes in the network, consisting of creations and deletions of nodes and edges. Since we are not interested in the deletion of nodes and edges, we will only look at the added nodes and edges. In this way, by comparing snapshots, we can single out individual node creations and edge creations. The process of comparing snapshots is shown below:
 \begin{figure}[H]
     \centering
-        \includegraphics[scale = 0.25, trim = 0cm 8cm 0cm 0cm]{./dynamic.pdf}
+        \includegraphics[scale = 0.25, trim = 0cm 8cm 0cm 0cm]{./graphs/dynamic.pdf}
     \caption{Comparing snapshots} \label{fig:compare}
 \end{figure}
 
@@ -90,20 +123,20 @@ This process is analogous to taking the derivative of the graph at a certain tim
 For the first item, we treat out network as undirected and run depth-limited BFS (Shortest Path would be computationally inefficient) from the source node to try to determine the number of hops between source and destination. Distance 1 means that the new edge is a reciprocal edge, distance 2 means that the new edge closes a triangle. We look at the proportion of reciprocal edges and triangle-closing edges. \ref{fig:portion123} shows the results.
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{./distance_pie.eps}
+    \includegraphics[scale=0.4]{./graphs/distance_pie.eps}
     \caption{Distance between source and destination of new edges} \label{fig:portion123}
 \end{figure}
 
 Then, we revert to treating the graph as directed to study the triangle closing case. Note that the same triangle closing case on an undirected graph can turn into four possible types of cases for a directed graph, as shown below: 
 \begin{figure}[H]
     \centering
-        \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm]{./triangles.pdf}
+        \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm]{./graphs/triangles.pdf}
     \caption{Types of directed triangles} \label{fig:triangles}
 \end{figure}
 We look into which kind of triangles the new edges tend to close. Also, note that one single edge may close more than one type of triangle in a directed graph, and there are 15 combinations in all. 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.45, trim = 6cm 1cm 0cm 0cm]{./15_tri.eps}
+    \includegraphics[scale=0.45, trim = 6cm 1cm 0cm 0cm]{./graphs/15_tri.eps}
     \caption{Combination frequency of triangles closed} \label{fig:combo15}
 \end{figure}
 
@@ -160,48 +193,6 @@ P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
 \end{equation}
 
 In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. Luckily, we can use values from the previous iteration (warm start) to greatly save computation.
-
-\section{Results}
-\paragraph{}Up to now, we have finished a tough part of our work, which is processing the 720G dataset and generating our graph. After taking snapshots monthly for the network, we started to study the properties of the snap graphs.
-
-\paragraph{}From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It can be further observed that the number of both Wikipedia's nodes and its edges grow by about an order (10x) in about 22 months. Fig.~\ref{fig:growth} (right) shows that the number of nodes and edges in Wikipedia follows a rough linear ratio in their growth, indicating that Wikipedia is similar to a scale-free network. 
-
-A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the legends, or the red lines/points) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
-
-\begin{figure*}
-\centering{
-\includegraphics[width=0.33\textwidth]{p1-1}\includegraphics[width=0.33\textwidth]{p1-2}\includegraphics[width=0.33\textwidth]{p2-1}
-}
-\caption{Growth of Network over Time \label{fig:growth}}
-\end{figure*}
-
-\paragraph{}Further analysis of Wikipedia's evolution of diameter reveals an interesting phenomenon. As Fig.~\ref{fig:diameter} shows, the diameter of graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization further endorses our observation that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
-
-\begin{figure}[H]
-\centering{
-\includegraphics[width=0.5\linewidth]{p2-2}
-}
-\caption{Change of Diameter over Time\label{fig:diameter}}
-\end{figure}
-
-Besides those common benchmarks above, we also investigated the change of Wikipedia's connected component sizes over time, which might lend some insight to the difference between the difference between typical social networks and knowledge networks like Wikipedia (more comparison to social networks will be required to draw a conclusion). To investigate the huge difference in SCC sizes before and after redirection processing, we analyzed the portion of redirection nodes that are inside the largest SCC. As it turned out, only about 40\% of the removed redirection nodes are from the largest SCC, which suggest that redirection pages occur more in the in-component, out-component, and disjoint component of the largest SCC. This would require further investigation of the general structure of the Wikipedia network during the rest of our project.
-
-\begin{figure}[H]
-\centering{
-\includegraphics[width=0.5\linewidth]{p3-1}\includegraphics[width=0.5\linewidth]{p3-2}
-}
-\caption{Change of Connected Component Sizes \label{fig:cc}}
-\end{figure}
-
-Finally, we also plotted the changes of maximum in- and out-degrees over time, and briefly analyzed some interesting facts. Though these graphs do not provide valuable insights themselves (thus they will be replaced with the evolution of degree distributions in our final report), we did find ``fun facts'' analyzing these figures. For in-degree, the significant jump that took place by the end of 2002 was caused by page ``2000'', as it turned out that people back then tend to link many occurrences of year 2000 to that page. As for large out-degree nodes, typically they are lists of entities, and the administrators remove some of the ``unencyclopedic'' lists from time to time, which reduces the maximum out-degree at certain time points. 
-
-\begin{figure}[H]
-\centering{
-\includegraphics[width=0.5\linewidth]{p4-1}\includegraphics[width=0.5\linewidth]{p4-2}
-}
-\caption{Change of Max In- and Out-Degree over Time \label{fig:max-degree}}
-\end{figure}
-
 
 
 \section{Discussion and Next Steps} 
