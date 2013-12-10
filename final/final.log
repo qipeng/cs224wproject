@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.12)  8 DEC 2013 20:51
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.12)  9 DEC 2013 16:34
 entering extended mode
 **final.tex
-(Z:\private\224w\project\final\final.tex
+(Z:\private\224w\project\cs224wproject\final\final.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -250,7 +250,7 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-(Z:\private\224w\project\final\final.aux)
+(Z:\private\224w\project\cs224wproject\final\final.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -288,119 +288,170 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <./dynamic.pdf, id=9, 846
-.16125pt x 598.48593pt>
-File: ./dynamic.pdf Graphic file (type pdf)
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <./graphs/p1-1.pdf, id=9,
+ 433.62pt x 289.08pt>
+File: ./graphs/p1-1.pdf Graphic file (type pdf)
 
-<use ./dynamic.pdf>
-Package pdftex.def Info: ./dynamic.pdf used on input line 78.
-(pdftex.def)             Requested size: 211.5398pt x 92.71574pt.
+<use ./graphs/p1-1.pdf>
+Package pdftex.def Info: ./graphs/p1-1.pdf used on input line 69.
+(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
+ <./graphs/p1-2.pdf, id=10, 433.62pt x 289.08pt>
+File: ./graphs/p1-2.pdf Graphic file (type pdf)
+
+<use ./graphs/p1-2.pdf>
+Package pdftex.def Info: ./graphs/p1-2.pdf used on input line 69.
+(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
+ <./graphs/p2-1.pdf, id=11, 433.62pt x 289.08pt>
+File: ./graphs/p2-1.pdf Graphic file (type pdf)
+
+<use ./graphs/p2-1.pdf>
+Package pdftex.def Info: ./graphs/p2-1.pdf used on input line 69.
+(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
+Package epstopdf Info: Source file: <./graphs/degree.eps>
+(epstopdf)                    date: 2013-12-08 21:29:16
+(epstopdf)                    size: 110733 bytes
+(epstopdf)             Output file: <./graphs/degree-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-12-09 16:34:05
+(epstopdf)                    size: 20121 bytes
+(epstopdf)             Command: <epstopdf --outfile=./graphs/degree-eps-convert
+ed-to.pdf ./graphs/degree.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphs/degree-eps-converted-to.pdf, id=12, 562.1pt x 421.575pt>
+File: ./graphs/degree-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphs/degree-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphs/degree-eps-converted-to.pdf used on input lin
+e 77.
+(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
+Package epstopdf Info: Source file: <./graphs/indegree.eps>
+(epstopdf)                    date: 2013-12-08 21:29:24
+(epstopdf)                    size: 110672 bytes
+(epstopdf)             Output file: <./graphs/indegree-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-12-09 16:34:08
+(epstopdf)                    size: 20025 bytes
+(epstopdf)             Command: <epstopdf --outfile=./graphs/indegree-eps-conve
+rted-to.pdf ./graphs/indegree.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphs/indegree-eps-converted-to.pdf, id=13, 562.1pt x 421.575pt>
+File: ./graphs/indegree-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphs/indegree-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphs/indegree-eps-converted-to.pdf used on input l
+ine 77.
+(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
+Package epstopdf Info: Source file: <./graphs/outdegree.eps>
+(epstopdf)                    date: 2013-12-08 21:29:50
+(epstopdf)                    size: 110601 bytes
+(epstopdf)             Output file: <./graphs/outdegree-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-12-09 16:34:10
+(epstopdf)                    size: 19618 bytes
+(epstopdf)             Command: <epstopdf --outfile=./graphs/outdegree-eps-conv
+erted-to.pdf ./graphs/outdegree.eps>
+(epstopdf)             \includegraphics on input line 77.
+Package epstopdf Info: Output file is already uptodate.
+
+<./graphs/outdegree-eps-converted-to.pdf, id=14, 562.1pt x 421.575pt>
+File: ./graphs/outdegree-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./graphs/outdegree-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphs/outdegree-eps-converted-to.pdf used on input 
+line 77.
+(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
  [2]
-Package epstopdf Info: Source file: <./distance_pie.eps>
+<./graphs/p2-2.pdf, id=21, 433.62pt x 289.08pt>
+File: ./graphs/p2-2.pdf Graphic file (type pdf)
+ <use ./graphs/p2-2.pdf>
+Package pdftex.def Info: ./graphs/p2-2.pdf used on input line 88.
+(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
+
+<./graphs/p3-1.pdf, id=22, 433.62pt x 289.08pt>
+File: ./graphs/p3-1.pdf Graphic file (type pdf)
+ <use ./graphs/p3-1.pdf>
+Package pdftex.def Info: ./graphs/p3-1.pdf used on input line 98.
+(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
+
+<./graphs/p3-2.pdf, id=23, 433.62pt x 289.08pt>
+File: ./graphs/p3-2.pdf Graphic file (type pdf)
+ <use ./graphs/p3-2.pdf>
+Package pdftex.def Info: ./graphs/p3-2.pdf used on input line 98.
+(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
+
+[3 <Z:/private/224w/project/cs224wproject/final/graphs/p1-1.pdf> <Z:/private/22
+4w/project/cs224wproject/final/graphs/p1-2.pdf> <Z:/private/224w/project/cs224w
+project/final/graphs/p2-1.pdf> <Z:/private/224w/project/cs224wproject/final/gra
+phs/degree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wproject/final/g
+raphs/indegree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wproject/fin
+al/graphs/outdegree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wprojec
+t/final/graphs/p2-2.pdf>]
+<./graphs/dynamic.pdf, id=146, 846.16125pt x 598.48593pt>
+File: ./graphs/dynamic.pdf Graphic file (type pdf)
+
+<use ./graphs/dynamic.pdf>
+Package pdftex.def Info: ./graphs/dynamic.pdf used on input line 111.
+(pdftex.def)             Requested size: 211.5398pt x 92.71574pt.
+Package epstopdf Info: Source file: <./graphs/distance_pie.eps>
 (epstopdf)                    date: 2013-12-08 19:46:28
 (epstopdf)                    size: 18277 bytes
-(epstopdf)             Output file: <./distance_pie-eps-converted-to.pdf>
+(epstopdf)             Output file: <./graphs/distance_pie-eps-converted-to.pdf
+>
 (epstopdf)                    date: 2013-12-08 20:36:38
 (epstopdf)                    size: 12832 bytes
-(epstopdf)             Command: <epstopdf --outfile=./distance_pie-eps-converte
-d-to.pdf ./distance_pie.eps>
-(epstopdf)             \includegraphics on input line 93.
+(epstopdf)             Command: <epstopdf --outfile=./graphs/distance_pie-eps-c
+onverted-to.pdf ./graphs/distance_pie.eps>
+(epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
-<./distance_pie-eps-converted-to.pdf, id=16, 442.65375pt x 442.65375pt>
-File: ./distance_pie-eps-converted-to.pdf Graphic file (type pdf)
-
-<use ./distance_pie-eps-converted-to.pdf>
-Package pdftex.def Info: ./distance_pie-eps-converted-to.pdf used on input line
- 93.
+<./graphs/distance_pie-eps-converted-to.pdf, id=147, 442.65375pt x 442.65375pt>
+File: ./graphs/distance_pie-eps-converted-to.pdf Graphic file (type pdf)
+<use ./graphs/distance_pie-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphs/distance_pie-eps-converted-to.pdf used on inp
+ut line 126.
 (pdftex.def)             Requested size: 177.05835pt x 177.05835pt.
 
-<./triangles.pdf, id=17, 598.48593pt x 846.16125pt>
-File: ./triangles.pdf Graphic file (type pdf)
- <use ./triangles.pdf>
-Package pdftex.def Info: ./triangles.pdf used on input line 100.
+<./graphs/triangles.pdf, id=148, 598.48593pt x 846.16125pt>
+File: ./graphs/triangles.pdf Graphic file (type pdf)
+
+<use ./graphs/triangles.pdf>
+Package pdftex.def Info: ./graphs/triangles.pdf used on input line 133.
 (pdftex.def)             Requested size: 169.63876pt x 146.78168pt.
-Package epstopdf Info: Source file: <./15_tri.eps>
+Package epstopdf Info: Source file: <./graphs/15_tri.eps>
 (epstopdf)                    date: 2013-12-08 20:47:00
 (epstopdf)                    size: 14031 bytes
-(epstopdf)             Output file: <./15_tri-eps-converted-to.pdf>
+(epstopdf)             Output file: <./graphs/15_tri-eps-converted-to.pdf>
 (epstopdf)                    date: 2013-12-08 20:47:22
 (epstopdf)                    size: 4523 bytes
-(epstopdf)             Command: <epstopdf --outfile=./15_tri-eps-converted-to.p
-df ./15_tri.eps>
-(epstopdf)             \includegraphics on input line 106.
+(epstopdf)             Command: <epstopdf --outfile=./graphs/15_tri-eps-convert
+ed-to.pdf ./graphs/15_tri.eps>
+(epstopdf)             \includegraphics on input line 139.
 Package epstopdf Info: Output file is already uptodate.
 
-<./15_tri-eps-converted-to.pdf, id=18, 599.23875pt x 317.185pt>
-File: ./15_tri-eps-converted-to.pdf Graphic file (type pdf)
+<./graphs/15_tri-eps-converted-to.pdf, id=149, 599.23875pt x 317.185pt>
+File: ./graphs/15_tri-eps-converted-to.pdf Graphic file (type pdf)
 
-<use ./15_tri-eps-converted-to.pdf>
-Package pdftex.def Info: ./15_tri-eps-converted-to.pdf used on input line 106.
+<use ./graphs/15_tri-eps-converted-to.pdf>
+Package pdftex.def Info: ./graphs/15_tri-eps-converted-to.pdf used on input lin
+e 139.
 (pdftex.def)             Requested size: 192.83322pt x 129.9283pt.
- [3 <Z:/private/224w/project/final/dynamic.pdf> <Z:/private/224w/project/final/
-distance_pie-eps-converted-to.pdf> <Z:/private/224w/project/final/triangles.pdf
->] [4 <Z:/private/224w/project/final/15_tri-eps-converted-to.pdf>] <p1-1.pdf, i
-d=80, 433.62pt x 289.08pt>
-File: p1-1.pdf Graphic file (type pdf)
- <use p1-1.pdf>
-Package pdftex.def Info: p1-1.pdf used on input line 173.
-(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
-
-<p1-2.pdf, id=81, 433.62pt x 289.08pt>
-File: p1-2.pdf Graphic file (type pdf)
- <use p1-2.pdf>
-Package pdftex.def Info: p1-2.pdf used on input line 173.
-(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
-
-<p2-1.pdf, id=82, 433.62pt x 289.08pt>
-File: p2-1.pdf Graphic file (type pdf)
- <use p2-1.pdf>
-Package pdftex.def Info: p2-1.pdf used on input line 173.
-(pdftex.def)             Requested size: 155.02pt x 103.3453pt.
-
-<p2-2.pdf, id=83, 433.62pt x 289.08pt>
-File: p2-2.pdf Graphic file (type pdf)
- <use p2-2.pdf>
-Package pdftex.def Info: p2-2.pdf used on input line 182.
-(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
-
-<p3-1.pdf, id=84, 433.62pt x 289.08pt>
-File: p3-1.pdf Graphic file (type pdf)
- <use p3-1.pdf>
-Package pdftex.def Info: p3-1.pdf used on input line 191.
-(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
-
-<p3-2.pdf, id=85, 433.62pt x 289.08pt>
-File: p3-2.pdf Graphic file (type pdf)
- <use p3-2.pdf>
-Package pdftex.def Info: p3-2.pdf used on input line 191.
-(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
- [5 <Z:/private/224w/project/final/p2-2.pdf> <Z:/private/224w/project/final/p3-
-1.pdf> <Z:/private/224w/project/final/p3-2.pdf>] <p4-1.pdf, id=155, 433.62pt x 
-289.08pt>
-File: p4-1.pdf Graphic file (type pdf)
- <use p4-1.pdf>
-Package pdftex.def Info: p4-1.pdf used on input line 200.
-(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
-
-<p4-2.pdf, id=156, 433.62pt x 289.08pt>
-File: p4-2.pdf Graphic file (type pdf)
- <use p4-2.pdf>
-Package pdftex.def Info: p4-2.pdf used on input line 200.
-(pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
-
-(Z:\private\224w\project\final\final.bbl) [6 <Z:/private/224w/project/final/p1-
-1.pdf> <Z:/private/224w/project/final/p1-2.pdf> <Z:/private/224w/project/final/
-p2-1.pdf> <Z:/private/224w/project/final/p4-1.pdf> <Z:/private/224w/project/fin
-al/p4-2.pdf>] (Z:\private\224w\project\final\final.aux) ) 
+ [4 <Z:/private/224w/project/cs224wproject/final/graphs/p3-1.pdf> <Z:/private/2
+24w/project/cs224wproject/final/graphs/p3-2.pdf> <Z:/private/224w/project/cs224
+wproject/final/graphs/dynamic.pdf> <Z:/private/224w/project/cs224wproject/final
+/graphs/distance_pie-eps-converted-to.pdf>] [5 <Z:/private/224w/project/cs224wp
+roject/final/graphs/triangles.pdf> <Z:/private/224w/project/cs224wproject/final
+/graphs/15_tri-eps-converted-to.pdf>] (Z:\private\224w\project\cs224wproject\fi
+nal\final.bbl) [6]
+(Z:\private\224w\project\cs224wproject\final\final.aux) ) 
 Here is how much of TeX's memory you used:
- 2945 strings out of 494045
- 39392 string characters out of 3152017
- 109022 words of memory out of 3000000
- 6173 multiletter control sequences out of 15000+200000
- 11849 words of font info for 46 fonts, out of 3000000 for 9000
+ 2960 strings out of 494045
+ 40306 string characters out of 3152017
+ 118022 words of memory out of 3000000
+ 6176 multiletter control sequences out of 15000+200000
+ 11541 words of font info for 45 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,7n,24p,1131b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,7n,24p,1131b,337s stack positions out of 5000i,500n,10000p,200000b,50000s
 <F:/Software/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb><F:/Software/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmex10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cmextra/
@@ -412,9 +463,9 @@ onts/cm/cmr10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 X/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/Software/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y7.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on final.pdf (6 pages, 383246 bytes).
+Output written on final.pdf (6 pages, 394818 bytes).
 PDF statistics:
- 329 PDF objects out of 1000 (max. 8388607)
+ 298 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
