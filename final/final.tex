@@ -136,7 +136,8 @@ We study individual edge creation processes in the following way: Note that if w
     \caption{Comparing snapshots} \label{fig:compare}
 \end{figure}
 
-This process is analogous to taking the derivative of the graph at a certain time. Now, for each observed edge creation, we study it in a dynamic setting. As mentioned earlier, we study the selection of destination, in particular two aspects:
+This process is analogous to taking the derivative of the graph at a certain time. In our experiments, we chose the time interval between snapshots to be 3 days. This interval is short enough so that the vast majority of nodes in edges in our graph has not changed, and long enough so that we have a sufficient amount of example to work with. The following experiments were done with snapshots taken between Aug 1, 2005 and Aug 4, 2005.
+For each observed edge creation, we now study it in a dynamic setting. As mentioned earlier, we study the selection of destination, in particular two aspects:
 \begin{enumerate}
 \item How far away the destination is from the source (Triangle closing model).
 \item What are the properties of the destination node (Preferential Attachment model).
