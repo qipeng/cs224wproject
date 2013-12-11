@@ -67,7 +67,7 @@ A closer observation on the linear scale graph revealed a significant difference
 \includegraphics[width=0.3\textwidth]{./graphs/p1-2}
 \includegraphics[width=0.3\textwidth]{./graphs/p2-1}
 }
-\caption{Number of Nodes and Edges over Time \label{fig:growth}}
+\caption{Number of nodes and edges over time \label{fig:growth}}
 \end{figure*}
 
 \begin{figure*}
@@ -76,7 +76,7 @@ A closer observation on the linear scale graph revealed a significant difference
 \includegraphics[width=0.32\textwidth]{./graphs/indegree}
 \includegraphics[width=0.32\textwidth]{./graphs/outdegree}
 }
-\caption{Degree, In-Degree and Out-Degree Distributions over Time \label{fig:degree}}
+\caption{Degree, in-degree and out-degree distributions over time \label{fig:degree}}
 \end{figure*}
 
 \subsection{Diameter}
@@ -86,7 +86,7 @@ As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, 
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/p2-2}
 }
-\caption{Change of Diameter over Time\label{fig:diameter}}
+\caption{Change of diameter over time\label{fig:diameter}}
 \end{figure}
 
 \subsection{Connected Component Sizes}
@@ -105,7 +105,7 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/deg_dist}
 }
-\caption{Degree Distribution on Aug 2003}
+\caption{Degree distribution on Aug 1, 2003}
 \label{fig:deg_dist}
 \end{figure}
 
@@ -114,19 +114,17 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 \includegraphics[width=0.48\linewidth]{./graphs/alpha_indeg}
 \includegraphics[width=0.48\linewidth]{./graphs/alpha_outdeg}
 }
-\caption{$\alpha$ exponent over time}
+\caption{Exponent $\alpha$ over time}
 \label{fig:alpha_trend}
 \end{figure}
 
-REVIEW PENDING
+From this point on, we consider our Wikipedia network with redirections removed. Previous observations have given insight on the effect of this process on the network. It has been shown that removing the redirections is a natural process that does not have a major effects on the network.
 
-From this point on, we consider only Wikipedia networks with redirection removed. Previous observations has given insight on the effect this process has on the network. It has proved that removing the redirection is a natural process that does not have a major effects on the network.
+Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in the Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
 
-Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
+From the figures, it appears that the distribution is relatively stable as the number of nodes grows exponentially. To further investigate the degree distribution, we plot the degree distributions of our network at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on August 1, 2003. It is clear that the distribution follows a power law. 
 
-From the figures, it appears that the distribution is relatively stable despite the number of nodes grow exponentially. To further investigate Wikipedia's scale-free properties, we drew degree distributions of the Wikipedia network (without aggregation) at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on August 2003. It clearly follows power law. 
-
-Further, we estimated the $\alpha$ exponent over time. You can find the trend of $\alpha$ in fig.~\ref{fig:alpha_trend}. At the beginning, there were too little nodes and $\alpha$ value is much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value where $\alpha$ converges.
+In addition, we estimated the exponent $\alpha$ over time. The trend of $\alpha$ is shown in Fig.~\ref{fig:alpha_trend}. At the beginning, there were too few nodes and the estimated value was much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value where $\alpha$ converges.
 
 \section{Dynamic Analysis}
 After we generate snapshots and analyze properties of the whole network, we move on to study the dynamics of the network, namely, the process that determines edge destination.
