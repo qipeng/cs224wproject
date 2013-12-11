@@ -131,7 +131,7 @@ After we generate snapshots and analyze properties of the whole network, we move
 We study individual edge creation processes in the following way: Note that if we take two snapshots of the network in a short period of time, the vast majority of nodes and edges will not have changed. If the interval is sufficiently short, there will only be a small amount of changes in the network, consisting of creations and deletions of nodes and edges. Since we are not interested in the deletion of nodes and edges, we will only look at the added nodes and edges. In this way, by comparing snapshots, we can single out individual node creations and edge creations. The process of comparing snapshots is shown below:
 \begin{figure}[ht]
     \centering
-        \includegraphics[scale = 0.25, trim = 0cm 8cm 0cm 0cm]{./graphs/dynamic.pdf}
+        \includegraphics[scale = 0.25, trim = 0cm 8cm 0cm 0cm,clip=true]{./graphs/dynamic.pdf}
     \caption{Comparing snapshots} \label{fig:compare}
 \end{figure}
 
@@ -154,14 +154,14 @@ From Fig.~\ref{fig:portion123}, we see that the majority of new edges are betwee
 To study triangle closing for Wikipedia, we generalize the triangle closing theory to directed graphs. Note that the same triangle closing case on an undirected graph can turn into four possible types of cases for a directed graph, as shown below: 
 \begin{figure}[ht]
     \centering
-        \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm]{./graphs/triangles.pdf}
+        \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm,clip=true]{./graphs/triangles.pdf}
     \caption{Types of directed triangles} \label{fig:triangles}
 \end{figure}
 We look into which kind of triangles the new edges tend to close. Also, note that one single edge may close more than one type of triangle in a directed graph, and there are 15 combinations in all. 
 
 \begin{figure}[t]
     \centering
-    \includegraphics[scale=0.45, trim = 6cm 1cm 0cm 0cm]{./graphs/15_tri.eps}
+    \includegraphics[scale=0.45, trim = 6cm 1cm 0cm 0cm,clip=true]{./graphs/15_tri.eps}
     \caption{Combination frequency of triangles closed} \label{fig:combo15}
 \end{figure}
 
