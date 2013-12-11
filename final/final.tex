@@ -257,10 +257,15 @@ P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
 \end{equation}
 
 In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. Luckily, we can use values from the previous iteration (warm start) to greatly save computation.
-
+\begin{figure}[H]
+\centering{
+\includegraphics[width=0.8\linewidth]{./graphs/deg_dist_pr}
+}
+\caption{Degree distribution of PA PageRank} \label{fig:pa_pr_deg_dist}
+\end{figure}
 From the preliminary experimental results, we see that one potential problem with the generation model might be that due to the way PageRank is calculated, `rich' nodes might get `too rich' as the network grows. We need to adjust parameters so that we introduce a higher probability of a new node creating random edges, and a lower probability of new edges following probability by PageRank score.
 
-\section{Discussion and Next Steps} 
+\section{Conclusion} 
 
 
 \bibliographystyle{plain}
