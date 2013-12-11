@@ -1,21 +1,24 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.12)  10 DEC 2013 14:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2013.6.7)  10 DEC 2013 16:02
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **final.tex
-(Z:\private\224w\project\cs224wproject\final\final.tex
+(./final.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
-abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
-croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
-ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
-vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
-an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
-romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
-sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
-senglishmax, welsh, loaded.
-(F:\Software\MiKTeX\tex\latex\base\article.cls
+Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, ge
+rman-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabi
+c, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danis
+h, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnis
+h, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, h
+ungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, ma
+rathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, 
+kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk,
+ piedmontese, polish, portuguese, romanian, romansh, russian, sanskrit, serbian
+, serbianc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, u
+ppersorbian, welsh, loaded.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(F:\Software\MiKTeX\tex\latex\base\size10.clo
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -30,11 +33,11 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(F:\Software\MiKTeX\tex\latex\preprint\fullpage.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/preprint/fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 )
-(F:\Software\MiKTeX\tex\latex\enumitem\enumitem.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enitkv@toks@=\toks14
 \labelindent=\skip44
@@ -43,41 +46,41 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box26
 \enitdp@description=\count87
 )
-(F:\Software\MiKTeX\tex\latex\ams\math\amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip45
 
 For additional information on amsmath, use the `?' option.
-(F:\Software\MiKTeX\tex\latex\ams\math\amstext.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
 
-(F:\Software\MiKTeX\tex\latex\ams\math\amsgen.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks16
 \ex@=\dimen104
 ))
-(F:\Software\MiKTeX\tex\latex\ams\math\amsbsy.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen105
 )
-(F:\Software\MiKTeX\tex\latex\ams\math\amsopn.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box27
 \strutbox@=\box28
 \big@size=\dimen106
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -98,44 +101,44 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip46
 \multlinetaggap=\skip47
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(F:\Software\MiKTeX\tex\latex\amsfonts\amssymb.sty
-Package: amssymb 2009/06/22 v3.00
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(F:\Software\MiKTeX\tex\latex\amsfonts\amsfonts.sty
-Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(F:\Software\MiKTeX\tex\latex\graphics\graphicx.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(F:\Software\MiKTeX\tex\latex\graphics\keyval.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-(F:\Software\MiKTeX\tex\latex\graphics\graphics.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(F:\Software\MiKTeX\tex\latex\graphics\trig.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(F:\Software\MiKTeX\tex\latex\00miktex\graphics.cfg
-File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(F:\Software\MiKTeX\tex\latex\pdftex-def\pdftex.def
+(/usr/local/texlive/2012/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(F:\Software\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count100
@@ -143,10 +146,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen113
 \Gin@req@width=\dimen114
 )
-(F:\Software\MiKTeX\tex\latex\setspace\setspace.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(F:\Software\MiKTeX\tex\latex\float\float.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count101
 \float@exts=\toks22
@@ -154,7 +157,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks23
 \@floatcapt=\box30
 )
-(F:\Software\MiKTeX\tex\latex\tools\multicol.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count102
 \mult@box=\box31
@@ -202,28 +205,28 @@ Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \colbreak@box=\box56
 \multicol@sort@counter=\count110
 )
-(F:\Software\MiKTeX\tex\latex\oberdiek\epstopdf.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf.sty
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-(F:\Software\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(F:\Software\MiKTeX\tex\latex\oberdiek\grfext.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(F:\Software\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+(/usr/local/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\ifluatex.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -232,11 +235,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(F:\Software\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(F:\Software\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+(/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -249,8 +252,14 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-))
-(Z:\private\224w\project\cs224wproject\final\final.aux)
+
+(/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+)))
+(./final.aux)
+\openout1 = `final.aux'.
+
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -264,7 +273,7 @@ LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 
-(F:\Software\MiKTeX\tex\context\base\supp-pdf.mkii
+(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen123
@@ -279,193 +288,200 @@ LaTeX Font Info:    ... okay on input line 8.
 \everyMPtoPDFconversion=\toks25
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 12.
- (F:\Software\MiKTeX\tex\latex\amsfonts\umsa.fd
-File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
-(F:\Software\MiKTeX\tex\latex\amsfonts\umsb.fd
-File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] <./graphs/p1-1.pdf, id=9,
- 433.62pt x 289.08pt>
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<./graphs/p1-1.pdf, id=10, 433.62pt x 289.08pt>
 File: ./graphs/p1-1.pdf Graphic file (type pdf)
-
-<use ./graphs/p1-1.pdf>
+ <use ./graphs/p1-1.pdf>
 Package pdftex.def Info: ./graphs/p1-1.pdf used on input line 69.
 (pdftex.def)             Requested size: 140.92793pt x 93.94987pt.
- <./graphs/p1-2.pdf, id=10, 433.62pt x 289.08pt>
-File: ./graphs/p1-2.pdf Graphic file (type pdf)
 
-<use ./graphs/p1-2.pdf>
+<./graphs/p1-2.pdf, id=11, 433.62pt x 289.08pt>
+File: ./graphs/p1-2.pdf Graphic file (type pdf)
+ <use ./graphs/p1-2.pdf>
 Package pdftex.def Info: ./graphs/p1-2.pdf used on input line 69.
 (pdftex.def)             Requested size: 140.92793pt x 93.94987pt.
- <./graphs/p2-1.pdf, id=11, 433.62pt x 289.08pt>
-File: ./graphs/p2-1.pdf Graphic file (type pdf)
 
-<use ./graphs/p2-1.pdf>
+<./graphs/p2-1.pdf, id=12, 433.62pt x 289.08pt>
+File: ./graphs/p2-1.pdf Graphic file (type pdf)
+ <use ./graphs/p2-1.pdf>
 Package pdftex.def Info: ./graphs/p2-1.pdf used on input line 69.
 (pdftex.def)             Requested size: 140.92793pt x 93.94987pt.
-Package epstopdf Info: Source file: <./graphs/degree.eps>
-(epstopdf)                    date: 2013-12-08 21:29:16
-(epstopdf)                    size: 110733 bytes
-(epstopdf)             Output file: <./graphs/degree-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-12-09 16:34:05
-(epstopdf)                    size: 20121 bytes
-(epstopdf)             Command: <epstopdf --outfile=./graphs/degree-eps-convert
-ed-to.pdf ./graphs/degree.eps>
-(epstopdf)             \includegraphics on input line 79.
-Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/degree-eps-converted-to.pdf, id=12, 562.1pt x 421.575pt>
+[2]
+
+LaTeX Warning: Reference `fig:deg_dist' on page 3 undefined on input line 82.
+
+
+LaTeX Warning: Reference `fig:alpha_trend' on page 3 undefined on input line 84
+.
+
+Package epstopdf Info: Source file: <./graphs/degree.eps>
+(epstopdf)                    date: 2013-12-10 15:03:39
+(epstopdf)                    size: 110368 bytes
+(epstopdf)             Output file: <./graphs/degree-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-12-10 15:03:49
+(epstopdf)                    size: 21762 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphs/degree-eps-conver
+ted-to.pdf ./graphs/degree.eps>
+(epstopdf)             \includegraphics on input line 88.
+Package epstopdf Info: Output file is already uptodate.
+<./graphs/degree-eps-converted-to.pdf, id=19, 337.26pt x 265.99374pt>
 File: ./graphs/degree-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphs/degree-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/degree-eps-converted-to.pdf used on input lin
-e 79.
-(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
+e 88.
+(pdftex.def)             Requested size: 155.02pt x 122.26524pt.
 Package epstopdf Info: Source file: <./graphs/indegree.eps>
-(epstopdf)                    date: 2013-12-08 21:29:24
-(epstopdf)                    size: 110672 bytes
+(epstopdf)                    date: 2013-12-10 15:03:14
+(epstopdf)                    size: 110335 bytes
 (epstopdf)             Output file: <./graphs/indegree-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-12-09 16:34:08
-(epstopdf)                    size: 20025 bytes
-(epstopdf)             Command: <epstopdf --outfile=./graphs/indegree-eps-conve
-rted-to.pdf ./graphs/indegree.eps>
-(epstopdf)             \includegraphics on input line 79.
+(epstopdf)                    date: 2013-12-10 15:03:50
+(epstopdf)                    size: 21759 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphs/indegree-eps-conv
+erted-to.pdf ./graphs/indegree.eps>
+(epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/indegree-eps-converted-to.pdf, id=13, 562.1pt x 421.575pt>
+<./graphs/indegree-eps-converted-to.pdf, id=20, 335.2525pt x 264.99pt>
 File: ./graphs/indegree-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphs/indegree-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/indegree-eps-converted-to.pdf used on input l
-ine 79.
-(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
+ine 88.
+(pdftex.def)             Requested size: 155.02pt x 122.52765pt.
 Package epstopdf Info: Source file: <./graphs/outdegree.eps>
-(epstopdf)                    date: 2013-12-08 21:29:50
-(epstopdf)                    size: 110601 bytes
+(epstopdf)                    date: 2013-12-10 15:02:36
+(epstopdf)                    size: 110265 bytes
 (epstopdf)             Output file: <./graphs/outdegree-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-12-09 16:34:10
-(epstopdf)                    size: 19618 bytes
-(epstopdf)             Command: <epstopdf --outfile=./graphs/outdegree-eps-conv
-erted-to.pdf ./graphs/outdegree.eps>
-(epstopdf)             \includegraphics on input line 79.
+(epstopdf)                    date: 2013-12-10 15:03:51
+(epstopdf)                    size: 21169 bytes
+(epstopdf)             Command: <repstopdf --outfile=./graphs/outdegree-eps-con
+verted-to.pdf ./graphs/outdegree.eps>
+(epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/outdegree-eps-converted-to.pdf, id=14, 562.1pt x 421.575pt>
+<./graphs/outdegree-eps-converted-to.pdf, id=21, 330.23375pt x 266.9975pt>
 File: ./graphs/outdegree-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphs/outdegree-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/outdegree-eps-converted-to.pdf used on input 
-line 79.
-(pdftex.def)             Requested size: 155.02pt x 116.26476pt.
- [2]
-<./graphs/p2-2.pdf, id=21, 433.62pt x 289.08pt>
+line 88.
+(pdftex.def)             Requested size: 155.02pt x 125.33809pt.
+
+<./graphs/p2-2.pdf, id=22, 433.62pt x 289.08pt>
 File: ./graphs/p2-2.pdf Graphic file (type pdf)
  <use ./graphs/p2-2.pdf>
-Package pdftex.def Info: ./graphs/p2-2.pdf used on input line 90.
+Package pdftex.def Info: ./graphs/p2-2.pdf used on input line 98.
 (pdftex.def)             Requested size: 183.9027pt x 122.60373pt.
 
-<./graphs/p3-1.pdf, id=22, 433.62pt x 289.08pt>
+<./graphs/p3-1.pdf, id=23, 433.62pt x 289.08pt>
 File: ./graphs/p3-1.pdf Graphic file (type pdf)
  <use ./graphs/p3-1.pdf>
-Package pdftex.def Info: ./graphs/p3-1.pdf used on input line 100.
+Package pdftex.def Info: ./graphs/p3-1.pdf used on input line 108.
 (pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
 
-<./graphs/p3-2.pdf, id=23, 433.62pt x 289.08pt>
+<./graphs/p3-2.pdf, id=24, 433.62pt x 289.08pt>
 File: ./graphs/p3-2.pdf Graphic file (type pdf)
  <use ./graphs/p3-2.pdf>
-Package pdftex.def Info: ./graphs/p3-2.pdf used on input line 100.
+Package pdftex.def Info: ./graphs/p3-2.pdf used on input line 108.
 (pdftex.def)             Requested size: 114.93875pt x 76.62347pt.
 
-[3 <Z:/private/224w/project/cs224wproject/final/graphs/p1-1.pdf> <Z:/private/22
-4w/project/cs224wproject/final/graphs/p1-2.pdf> <Z:/private/224w/project/cs224w
-project/final/graphs/p2-1.pdf> <Z:/private/224w/project/cs224wproject/final/gra
-phs/degree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wproject/final/g
-raphs/indegree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wproject/fin
-al/graphs/outdegree-eps-converted-to.pdf> <Z:/private/224w/project/cs224wprojec
-t/final/graphs/p2-2.pdf>]
-<./graphs/dynamic.pdf, id=146, 846.16125pt x 598.48593pt>
+[3 <./graphs/p1-1.pdf> <./graphs/p1-2.pdf> <./graphs/p2-1.pdf> <./graphs/p2-2.p
+df> <./graphs/p3-1.pdf> <./graphs/p3-2.pdf>]
+<./graphs/dynamic.pdf, id=179, 846.16125pt x 598.48593pt>
 File: ./graphs/dynamic.pdf Graphic file (type pdf)
 
 <use ./graphs/dynamic.pdf>
-Package pdftex.def Info: ./graphs/dynamic.pdf used on input line 113.
+Package pdftex.def Info: ./graphs/dynamic.pdf used on input line 121.
 (pdftex.def)             Requested size: 211.5398pt x 92.71574pt.
 Package epstopdf Info: Source file: <./graphs/distance_pie.eps>
-(epstopdf)                    date: 2013-12-08 19:46:28
+(epstopdf)                    date: 2013-12-10 14:36:24
 (epstopdf)                    size: 18277 bytes
 (epstopdf)             Output file: <./graphs/distance_pie-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2013-12-08 20:36:38
+(epstopdf)                    date: 2013-12-10 14:36:24
 (epstopdf)                    size: 12832 bytes
-(epstopdf)             Command: <epstopdf --outfile=./graphs/distance_pie-eps-c
-onverted-to.pdf ./graphs/distance_pie.eps>
-(epstopdf)             \includegraphics on input line 128.
+(epstopdf)             Command: <repstopdf --outfile=./graphs/distance_pie-eps-
+converted-to.pdf ./graphs/distance_pie.eps>
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/distance_pie-eps-converted-to.pdf, id=147, 442.65375pt x 442.65375pt>
+<./graphs/distance_pie-eps-converted-to.pdf, id=180, 442.65375pt x 442.65375pt>
 File: ./graphs/distance_pie-eps-converted-to.pdf Graphic file (type pdf)
 <use ./graphs/distance_pie-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/distance_pie-eps-converted-to.pdf used on inp
-ut line 128.
+ut line 136.
 (pdftex.def)             Requested size: 177.05835pt x 177.05835pt.
 
-<./graphs/triangles.pdf, id=148, 598.48593pt x 846.16125pt>
+<./graphs/triangles.pdf, id=181, 598.48593pt x 846.16125pt>
 File: ./graphs/triangles.pdf Graphic file (type pdf)
 
 <use ./graphs/triangles.pdf>
-Package pdftex.def Info: ./graphs/triangles.pdf used on input line 135.
+Package pdftex.def Info: ./graphs/triangles.pdf used on input line 143.
 (pdftex.def)             Requested size: 169.63876pt x 146.78168pt.
+ [4 <./graphs/degree-eps-converted-to.pdf> <./graphs/indegree-eps-converted-to.
+pdf> <./graphs/outdegree-eps-converted-to.pdf> <./graphs/dynamic.pdf> <./graphs
+/distance_pie-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphs/15_tri.eps>
-(epstopdf)                    date: 2013-12-08 20:47:00
+(epstopdf)                    date: 2013-12-10 14:36:24
 (epstopdf)                    size: 14031 bytes
 (epstopdf)             Output file: <./graphs/15_tri-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-12-08 20:47:22
+(epstopdf)                    date: 2013-12-10 14:36:24
 (epstopdf)                    size: 4523 bytes
-(epstopdf)             Command: <epstopdf --outfile=./graphs/15_tri-eps-convert
-ed-to.pdf ./graphs/15_tri.eps>
-(epstopdf)             \includegraphics on input line 141.
+(epstopdf)             Command: <repstopdf --outfile=./graphs/15_tri-eps-conver
+ted-to.pdf ./graphs/15_tri.eps>
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/15_tri-eps-converted-to.pdf, id=149, 599.23875pt x 317.185pt>
+<./graphs/15_tri-eps-converted-to.pdf, id=245, 599.23875pt x 317.185pt>
 File: ./graphs/15_tri-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphs/15_tri-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/15_tri-eps-converted-to.pdf used on input lin
-e 141.
+e 149.
 (pdftex.def)             Requested size: 192.83322pt x 129.9283pt.
- [4 <Z:/private/224w/project/cs224wproject/final/graphs/p3-1.pdf> <Z:/private/2
-24w/project/cs224wproject/final/graphs/p3-2.pdf> <Z:/private/224w/project/cs224
-wproject/final/graphs/dynamic.pdf> <Z:/private/224w/project/cs224wproject/final
-/graphs/distance_pie-eps-converted-to.pdf>] [5 <Z:/private/224w/project/cs224wp
-roject/final/graphs/triangles.pdf> <Z:/private/224w/project/cs224wproject/final
-/graphs/15_tri-eps-converted-to.pdf>] (Z:\private\224w\project\cs224wproject\fi
-nal\final.bbl) [6]
-(Z:\private\224w\project\cs224wproject\final\final.aux) ) 
+ [5 <./graphs/triangles.pdf> <./graphs/15_tri-eps-converted-to.pdf>] (./final.b
+bl) [6] (./final.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2960 strings out of 494045
- 40306 string characters out of 3152017
- 118022 words of memory out of 3000000
- 6176 multiletter control sequences out of 15000+200000
- 11541 words of font info for 45 fonts, out of 3000000 for 9000
- 715 hyphenation exceptions out of 8191
- 42i,7n,24p,1131b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
-<F:/Software/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmbx12.pfb><F:/Software/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmex10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cmextra/
-cmex7.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><F:/Sof
-tware/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><F:/Software/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb><F:/Software/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-<F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><F:/Software/MiKTe
-X/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/Software/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmsy10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on final.pdf (6 pages, 394421 bytes).
+ 2976 strings out of 493481
+ 41665 string characters out of 3140966
+ 120097 words of memory out of 3000000
+ 6205 multiletter control sequences out of 15000+200000
+ 11849 words of font info for 46 fonts, out of 3000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 42i,7n,26p,1130b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pf
+b></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+/usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/l
+ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loc
+al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on final.pdf (6 pages, 385587 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
