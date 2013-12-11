@@ -1,5 +1,5 @@
-\documentclass[10pt]{article}
-\usepackage{fullpage,enumitem,amsmath,amssymb,graphicx,setspace,float, multicol,epstopdf,subfigure}
+\documentclass[10pt,twocolumn]{article}
+\usepackage{fullpage,enumitem,amsmath,amssymb,graphicx,setspace,epstopdf,subfigure}
 
 %\setlength{\parskip}{-0.5\baselineskip}%
 %\setlength{\parindent}{0cm}
@@ -11,7 +11,7 @@
 \date{}
 \maketitle
 
-\begin{multicols}{2}
+%\begin{multicols}{2}
 \section{Introduction}
 
 The evolution of online networks is a topic that has generated much interest in research. In the past, scientists have studied some dynamic properties of network evolution, choosing to focus on online social networks and proposing a variety of models with some degree of success. However, much is yet to be learned about how large networks grow and evolve.
@@ -82,7 +82,7 @@ A closer observation on the linear scale graph revealed a significant difference
 \subsection{Diameter}
 As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization shows that the diameter of our Wikipedia network does not increase as its nodes and edges increase, and that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/p2-2}
 }
@@ -92,7 +92,7 @@ As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, 
 \subsection{Connected Component Sizes}
 We also looked at Wikipedia's connected component sizes over time. We found that the size of the largest Strongly Connected Component dropped significantly after we removed redirection chains. To investigate this huge difference, we looked at the portion of redirection nodes that were inside the largest SCC. As it turned out, only about 40\% of the nodes removed after processing redirection nodes were from inside the largest SCC, which suggests that redirection pages occur more often in the in-component, out-component, and disjoint component of the network. This lends some insight into the general structure of the Wikipedia network.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.5\linewidth]{./graphs/p3-1}\includegraphics[width=0.5\linewidth]{./graphs/p3-2}
 }
@@ -101,7 +101,7 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 
 \subsection{Degree Distribution}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/deg_dist}
 }
@@ -109,7 +109,7 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 \label{fig:deg_dist}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.48\linewidth]{./graphs/alpha_indeg}
 \includegraphics[width=0.48\linewidth]{./graphs/alpha_outdeg}
@@ -130,7 +130,7 @@ In addition, we estimated the exponent $\alpha$ over time. The trend of $\alpha$
 After we generate snapshots and analyze properties of the whole network, we move on to study the dynamics of the network, namely, the process that determines edge destination.
 
 We study individual edge creation processes in the following way: Note that if we take two snapshots of the network in a short period of time, the vast majority of nodes and edges will not have changed. If the interval is sufficiently short, there will only be a small amount of changes in the network, consisting of creations and deletions of nodes and edges. Since we are not interested in the deletion of nodes and edges, we will only look at the added nodes and edges. In this way, by comparing snapshots, we can single out individual node creations and edge creations. The process of comparing snapshots is shown below:
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
         \includegraphics[scale = 0.25, trim = 0cm 8cm 0cm 0cm]{./graphs/dynamic.pdf}
     \caption{Comparing snapshots} \label{fig:compare}
@@ -144,7 +144,7 @@ This process is analogous to taking the derivative of the graph at a certain tim
 
 \subsection{Triangle Closing}
 For the first item, we treat our network as undirected and run depth-limited BFS (Shortest Path would be computationally inefficient) from the source node to determine the number of hops between source and destination. Distance 1 means that the new edge is a reciprocal edge, distance 2 means that the new edge closes a triangle. We look at the proportion of reciprocal edges and triangle-closing edges. Fig.~\ref{fig:portion123} shows the results.
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.4]{./graphs/distance_pie.eps}
     \caption{Distance between source and destination of new edges} \label{fig:portion123}
@@ -152,13 +152,14 @@ For the first item, we treat our network as undirected and run depth-limited BFS
 From Fig.~\ref{fig:portion123}, we see that the majority of new edges are between nodes of distance 2, taking up about 70\% of all edges. The result that a large portion of new edges are triangle-closing edges is similar to the findings of \cite{leskovec2008microscopic}. This similarity suggests that both social networks and knowledge networks have this property. Also, the fact that most new edges close triangles makes it more interesting to look into what types of triangles these new edges tend to close.
 
 To study triangle closing for Wikipedia, we generalize the triangle closing theory to directed graphs. Note that the same triangle closing case on an undirected graph can turn into four possible types of cases for a directed graph, as shown below: 
-\begin{figure}[H]
+\begin{figure}[ht]
     \centering
         \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm]{./graphs/triangles.pdf}
     \caption{Types of directed triangles} \label{fig:triangles}
 \end{figure}
 We look into which kind of triangles the new edges tend to close. Also, note that one single edge may close more than one type of triangle in a directed graph, and there are 15 combinations in all. 
-\begin{figure}[H]
+
+\begin{figure}[t]
     \centering
     \includegraphics[scale=0.45, trim = 6cm 1cm 0cm 0cm]{./graphs/15_tri.eps}
     \caption{Combination frequency of triangles closed} \label{fig:combo15}
@@ -205,7 +206,7 @@ In Fig.~\ref{fig:pa_degree}, $p_e(d)\propto d^{1.08}$, $p_e(d_{in})\propto d_{in
 From this result, we conclude that Preferential Attachment by degree is futher confirmed on our Wikipedia graph. Both degree and in-degree are good measures, and the attachment is roughly linear in either case.
 
 Also, we tried plotting probability of an edge having source $u$ given $u$'s out-degree. Fig.~\ref{fig:out_pa_degree} shows that a node's out degree is a good predictor of whether it will spawn a new edge. Specifically, $p_{e,out}(d_{out})\propto d_{out}^{0.94}$. This result is not surprising.
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/outdeg_prob}
 \caption{Probability of outgoing edge given out-degree}\label{fig:out_pa_degree}}
@@ -239,7 +240,7 @@ p_e(pr)=\frac{\sum\limits_{t}[e_t=(u,v)\wedge r_{t-1}(v)=pr]}{\sum\limits_{t}|u:
 
 Finally, we can plot $p_e(pr)$ against $pr$ to see if there is a relation where $p_e(pr)\propto pr^\tau$, $\tau \approx 1$. Our results are shown in Fig.~\ref{fig:pa_pagerank} below:
 
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/pr_prob}
 }
@@ -255,7 +256,7 @@ P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
 \end{equation}
 
 In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. Luckily, we can use values from the previous iteration (warm start) to greatly save computation.
-\begin{figure}[H]
+\begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/deg_dist_pr}
 }
@@ -268,6 +269,6 @@ From the preliminary experimental results, we see that one potential problem wit
 
 \bibliographystyle{plain}
 \bibliography{ref}
-\end{multicols}
+%\end{multicols}
 
 \end{document}
