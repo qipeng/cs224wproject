@@ -44,6 +44,8 @@ Due to special characteristics of Wikipedia, we also did some additional preproc
 Also, redirections in Wikipedia may have a special effect on the graph. We decided to study this effect. To construct a redirection-free version of the graph, we removed all articles that redirected to another in the snapshots. After the removal, we moved all relevant edges to the page that it was redirected to. We noticed a very small portion of redirections that turned into a cycle. Such pages were removed completely.
 
 \section{Snapshot Analysis}
+We generate several snapshots of the evolving network at different times to observe static network features at different times. We select 1-month interval for the snapshots. From the resource perspective, they take around 10 gigabytes to store. From the result perspective, this is enough to generate relatively smooth and detailed evolution process. In the later dynamic analysis, we will use much smaller steps.
+
 A snapshot is a static view of an evolving network at a certain point in time. After generating a snapshot, we can do static analysis of its properties. In our project, we looked at the following properties of each snapshot:
 \begin{enumerate}
 \item Number of nodes and edges.
@@ -52,10 +54,10 @@ A snapshot is a static view of an evolving network at a certain point in time. A
 \item Connected component sizes.
 \end{enumerate}
 
-Looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. By comparing these statistics over many snapshots through time, we look for trends as the network develops. The interval between snapshots was chosen so that the snapshots are close enough to fully present the developmental stages of the network. The results are as follows:
+Looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. By comparing these statistics over many snapshots through time, we look for trends as the network develops. The interval between snapshots was chosen so that the snapshots are close enough to fully present the developmental stages of the network. The results are presented in the following subsections.
 
 \subsection{Number of Nodes and Edges}
-From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It it further observed that the number of Wikipedia's nodes and edges grow by one order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the ratio of nodes to edges roughly follow a linear pattern throughout Wikipedia's growth.
+From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It is further observed that the number of Wikipedia's nodes and edges grow by one order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the ratio of nodes to edges roughly follow a linear pattern throughout Wikipedia's growth.
 
 A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the graphs) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
 
