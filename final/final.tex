@@ -68,18 +68,6 @@ A closer observation on the linear scale graph revealed a significant difference
 \caption{Number of Nodes and Edges over Time \label{fig:growth}}
 \end{figure*}
 
-\subsection{Degree Distribution}
-
-REVIEW PENDING \&\& MOVE AFTER 5.4
-
-From this point on, we consider only Wikipedia networks with redirection removed. Previous observations has given insight on the effect this process has on the network. It has proved that removing the redirection is a natural process that does not have a major effects on the network.
-
-Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
-
-From the figures, it appears that the distribution is relatively stable despite the number of nodes grow exponentially. To further investigate Wikipedia's scale-free properties, we drew degree distributions of the Wikipedia network (without aggregation) at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on XXXX. It clearly satisfies power law. 
-
-Further, we estimated the $\alpha$ exponent over time. You can find the trend of $\alpha$ in fig.~\ref{fig:alpha_trend}. At the beginning, there were too little nodes and $\alpha$ value is much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value. $\alpha$ converges to XX. 
-
 \begin{figure*}
 \centering{
 \includegraphics[width=0.33\textwidth]{./graphs/degree}\includegraphics[width=0.33\textwidth]{./graphs/indegree}\includegraphics[width=0.33\textwidth]{./graphs/outdegree}
@@ -106,6 +94,18 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 }
 \caption{Change of Connected Component Sizes \label{fig:cc}}
 \end{figure}
+
+\subsection{Degree Distribution}
+
+REVIEW PENDING
+
+From this point on, we consider only Wikipedia networks with redirection removed. Previous observations has given insight on the effect this process has on the network. It has proved that removing the redirection is a natural process that does not have a major effects on the network.
+
+Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
+
+From the figures, it appears that the distribution is relatively stable despite the number of nodes grow exponentially. To further investigate Wikipedia's scale-free properties, we drew degree distributions of the Wikipedia network (without aggregation) at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on XXXX. It clearly satisfies power law. 
+
+Further, we estimated the $\alpha$ exponent over time. You can find the trend of $\alpha$ in fig.~\ref{fig:alpha_trend}. At the beginning, there were too little nodes and $\alpha$ value is much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value. $\alpha$ converges to XX. 
 
 \section{Dynamic Analysis}
 After we generate snapshots and analyze properties of the whole network, we move on to study the dynamics of the network, namely, the process that determines edge destination.
