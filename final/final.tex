@@ -43,7 +43,7 @@ Due to special characteristics of Wikipedia, we also did some additional preproc
 Also, redirections in Wikipedia may have a special effect on the graph. We decided to study this effect. To construct a redirection-free version of the graph, we removed all articles that redirected to another in the snapshots. After the removal, we moved all relevant edges to the page that it was redirected to. We noticed a very small portion of redirections that turned into a cycle. Such pages were removed completely.
 
 \section{Snapshot Analysis}
-We generate several snapshots of the evolving network at different times to observe static network features at different times. We select 1-month interval for the snapshots. From the resource perspective, they take around 10 gigabytes to store. From the result perspective, this is enough to generate relatively smooth and detailed evolution process. In the later dynamic analysis, we will use much smaller steps.
+We generated several snapshots of the evolving network at different times to observe static network features at different times. We selected one-month interval for the snapshots. From the resource perspective, they took around 10 gigabytes to store. From the result perspective, this was enough to generate relatively smooth and detailed evolution process. In the later dynamic analysis, we will use much smaller steps for accuracy of fine-grained analyses.
 
 A snapshot is a static view of an evolving network at a certain point in time. After generating a snapshot, we can do static analysis of its properties. In our project, we looked at the following properties of each snapshot:
 \begin{enumerate}
@@ -67,15 +67,6 @@ A closer observation on the linear scale graph revealed a significant difference
 \includegraphics[width=0.3\textwidth]{./graphs/p2-1}
 }
 \caption{Number of nodes and edges over time \label{fig:growth}}
-\end{figure*}
-
-\begin{figure*}
-\centering{
-\includegraphics[width=0.32\textwidth]{./graphs/degree}
-\includegraphics[width=0.32\textwidth]{./graphs/indegree}
-\includegraphics[width=0.32\textwidth]{./graphs/outdegree}
-}
-\caption{Degree, in-degree and out-degree distributions over time \label{fig:degree}}
 \end{figure*}
 
 \subsection{Diameter}
@@ -117,11 +108,20 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 \label{fig:alpha_trend}
 \end{figure}
 
-From this point on, we consider our Wikipedia network with redirections removed. Previous observations have given insight on the effect of this process on the network. It has been shown that removing the redirections is a natural process that does not have a major effects on the network.
+\begin{figure*}
+\centering{
+\includegraphics[width=0.32\textwidth]{./graphs/degree}
+\includegraphics[width=0.32\textwidth]{./graphs/indegree}
+\includegraphics[width=0.32\textwidth]{./graphs/outdegree}
+}
+\caption{Degree, in-degree and out-degree distributions over time \label{fig:degree}}
+\end{figure*}
+
+From this point on, we consider our Wikipedia network with redirections removed. Previous observations have given insight on the effect of this process on the network. It has been shown that removing the redirections is a natural process that does not have a major effect on the network.
 
 Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in the Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
 
-From the figures, it appears that the distribution is relatively stable as the number of nodes grows exponentially. To further investigate the degree distribution, we plot the degree distributions of our network at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on August 1, 2003. It is clear that the distribution follows a power law. 
+From the figures, it appears that the distribution is relatively stable as the number of nodes grows exponentially. To further investigate the degree distribution, we plot the degree distributions of our network at certain time points. Fig.~\ref{fig:deg_dist} shows the degree distribution of the snapshot on August 1, 2003. It is clear that the distribution follows a power law. 
 
 In addition, we estimated the exponent $\alpha$ over time. The trend of $\alpha$ is shown in Fig.~\ref{fig:alpha_trend}. At the beginning, there were too few nodes and the estimated value was much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value where $\alpha$ converges.
 
@@ -144,7 +144,7 @@ For each observed edge creation, we now study it in a dynamic setting. As mentio
 
 \subsection{Triangle Closing}
 For the first item, we treat our network as undirected and run depth-limited BFS (Shortest Path would be computationally inefficient) from the source node to determine the number of hops between source and destination. Distance 1 means that the new edge is a reciprocal edge, distance 2 means that the new edge closes a triangle. We look at the proportion of reciprocal edges and triangle-closing edges. Fig.~\ref{fig:portion123} shows the results.
-\begin{figure}[ht]
+\begin{figure}[t]
     \centering
     \includegraphics[scale=0.4]{./graphs/distance_pie.eps}
     \caption{Distance between source and destination of new edges} \label{fig:portion123}
