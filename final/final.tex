@@ -33,7 +33,6 @@ The preferential attachment (PA) theory was proposed and evaluated in both \cite
 We see that most papers in this field, including \cite{leskovec2008microscopic}, \cite{kossinets2006empirical} and \cite{kumar2010structure} were written with social networks as the object of study. This raises the question whether their proposed models hold in other types of networks. This paper aims to explore some of these models on Wikipedia to answer this question.
 
 \section{Model}
-
 We model Wikipedia as an unweighted directed graph where each document is a node, and each edge $\langle u, v \rangle$ represents that there exists referential link from document $u$ to document $v$. We model Wikipedia as unweighted for model simplicity, which means we choose to ignore the fact that some documents $u$ might link to some other document $v$ multiple times.
 
 
@@ -47,8 +46,6 @@ Due to special characteristics of Wikipedia, we also did some additional preproc
 Also, redirections in Wikipedia may have a special effect on the graph. We decided to study this effect. To construct a redirection-free version of the graph, we removed all articles that redirected to another in the snapshots. After the removal, we moved all relevant edges to the page that it was redirected to. We noticed a very small portion of redirections that turned into a cycle. Such pages were removed completely.
 
 \section{Snapshot Analysis}
-\vspace{10pt}
-
 A snapshot is a static view of an evolving network at a certain point in time. After generating a snapshot, we can do static analysis of its properties. In our project, we looked at the following properties of each snapshot:
 \begin{enumerate}
 \item Number of nodes and edges.
@@ -111,8 +108,6 @@ We also looked at Wikipedia's connected component sizes over time. We found that
 \end{figure}
 
 \section{Dynamic Analysis}
-\vspace{10pt}
-
 After we generate snapshots and analyze properties of the whole network, we move on to study the dynamics of the network, namely, the process that determines edge destination.
 
 We study individual edge creation processes in the following way: Note that if we take two snapshots of the network in a short period of time, the vast majority of nodes and edges will not have changed. If the interval is sufficiently short, there will only be a small amount of changes in the network, consisting of creations and deletions of nodes and edges. Since we are not interested in the deletion of nodes and edges, we will only look at the added nodes and edges. In this way, by comparing snapshots, we can single out individual node creations and edge creations. The process of comparing snapshots is shown below:
@@ -122,15 +117,14 @@ We study individual edge creation processes in the following way: Note that if w
     \caption{Comparing snapshots} \label{fig:compare}
 \end{figure}
 
-
-This process is analogous to taking the derivative of the graph at a certain time. Now, for each observed edge creation, we can study it in a dynamic setting. As mentioned earlier, we want to study the selection of destination, in particular two aspects:
+This process is analogous to taking the derivative of the graph at a certain time. Now, for each observed edge creation, we study it in a dynamic setting. As mentioned earlier, we study the selection of destination, in particular two aspects:
 \begin{enumerate}
 \item How far away the destination is from the source (Triangle closing model).
 \item What are the properties of the destination node (Preferential Attachment model).
 \end{enumerate}
 
 \subsection{Triangle Closing}
-For the first item, we treat out network as undirected and run depth-limited BFS (Shortest Path would be computationally inefficient) from the source node to try to determine the number of hops between source and destination. Distance 1 means that the new edge is a reciprocal edge, distance 2 means that the new edge closes a triangle. We look at the proportion of reciprocal edges and triangle-closing edges. \ref{fig:portion123} shows the results.
+For the first item, we treat out network as undirected and run depth-limited BFS (Shortest Path would be computationally inefficient) from the source node to determine the number of hops between source and destination. Distance 1 means that the new edge is a reciprocal edge, distance 2 means that the new edge closes a triangle. We look at the proportion of reciprocal edges and triangle-closing edges. \ref{fig:portion123} shows the results.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{./graphs/distance_pie.eps}
@@ -150,9 +144,10 @@ We look into which kind of triangles the new edges tend to close. Also, note tha
     \caption{Combination frequency of triangles closed} \label{fig:combo15}
 \end{figure}
 
+From Fig.~\ref{fig:combo15}, we see that....
 
 \subsection{Preferential Attachment}
-After that, we study Preferential Attachment(PA) in edge destination selection. Remember that in our class, the model was described as when a new node $j$ joins the network, it creates a constant number of edges, where edge destination is proportional to the destination's degree.
+In this section, we study Preferential Attachment(PA) in edge destination selection. The PA model is described as when a new node $j$ joins the network, it creates a constant number of edges, where the edge destination is proportional to the destination's degree.
 \begin{equation}
 \label{1}
 P(j\rightarrow i)=\frac{d_i}{\sum\limits_{k}d_k}
@@ -164,23 +159,23 @@ In \cite{leskovec2008microscopic}, PA was studied as the bias in selection of ed
 p_e(d)=\frac{\sum\limits_{t}[e_t=(u,v)\wedge d_{t-1}(v)=d]}{\sum\limits_{t}|u:d_{t-1}(u)=d|}
 \end{equation}
 
-We will use the above equation to calculate $p_e(d)$ for edge creation in our graph. If the data was generated by the PA model given in \eqref{1}, we would see that $p_e(d)\propto d$. If the attachment in our Wikipedia graph is close to linear, then the PA model by degree is further justified. If not, it would be an interesting phenomenon that would not be explained by PA by degree.
+We use the above equation to calculate $p_e(d)$ for edge creation in our Wikipedia graph. If the data was generated by the PA model given in \eqref{1}, we would see that $p_e(d)\propto d$. We fit a parameter $\tau$ to our data so that $p_e(d)\propto d^\tau$. If $\tau \approx 1$, the PA by degree model is further justified on our Wikipedia graph. Our results are shown in the following graph:
 
-\section{Model Proposal - Preferential \\Attachment by PageRank}
-\vspace{10pt}
+From Fig.~ , we see that...
 
-After evaluating Preferential Attachment by degree on our Wikipedia graph, we go on to propose a PA model of our own. Recall that the original PA model arised from the notation that ``the rich get richer'', with the degree of a node as a measure of importance. It is therefore natural to retain this notion of cumulative advantage, but use a different feature as the measure of importance.
+\section{Model Proposal -\\ PA by PageRank}
 
-One motivation for trying out another measure of importance arises out of observations from previous results. In \cite{leskovec2008microscopic}, PA with in-degree was evaluated on some social networks. The findings were that $p_e(d)\propto d$ worked for some networks (for DELICIOUS, $p_e(d)\propto d^{0.9}\approx d$), but for some networks, links did not attach preferentially by degree. In the case of LINKEDIN, we see that $p_e(d)\propto d^{0.6}$ for low degree nodes and $p_e(d)\propto d^{1.2}$ for high degree nodes, suggesting that low degree and high degree nodes get sub-preferential and super-preferential treatment according to their degree, respectively. This leads one to contemplate the possibility that there exists a better measure $m$ for importance than in-degree, so that $p_e(d)\propto m$ fits well to broad cases. 
+After evaluating Preferential Attachment by degree on our Wikipedia graph, we go on to propose a PA model of our own. Recall that the original PA model arose from the notation that ``the rich get richer'', with the degree of a node as a measure of importance. It is therefore natural to retain this notion of cumulative advantage, but use a different feature as the measure of importance.
 
+One motivation for trying out another measure of importance arises out of observations from results from previous experiments. In \cite{leskovec2008microscopic}, PA with in-degree was evaluated on some social networks. The findings were that $p_e(d)\propto d$ worked for some networks (for DELICIOUS, $p_e(d)\propto d^{0.9}\approx d$), but for some networks, links did not attach preferentially by degree. In the case of LINKEDIN, we see that $p_e(d)\propto d^{0.6}$ for low degree nodes and $p_e(d)\propto d^{1.2}$ for high degree nodes, suggesting that low degree and high degree nodes get sub-preferential and super-preferential treatment according to their degree, respectively. This leads one to contemplate the possibility that there exists a better measure $m$ for importance than in-degree, so that $p_e(d)\propto m$ fits well to broad cases. 
 
 We propose that the PageRank score of a node may be a good alternative measure of importance. Recall that PageRank conveys the idea that the importance of a node not only depends on the number of links it has, but also depends on the importance of the nodes it is linked to. This appears to be a more robust notion of importance than just the in-degree of a node.
 
-Therefore, we are interested in trying out Preferential Attachment by PageRank. This will be done as follows:
+Therefore, we are interested in trying out Preferential Attachment by PageRank. This is done as follows:
 
-First, compare snapshots with short intervals to single out individual edge creations.~Say we are studying the destination of newly created edge $e$.
+First, we compare snapshots with short intervals to single out individual edge creations.~Say we are studying the destination of newly created edge $e$.
 
-Next, calculate the PageRank scores of nodes in the original graph using the equation below (with other implementation details):
+Next, we calculate the PageRank scores of nodes in the original graph using the equation below (with other implementation details):
 \begin{equation}
 \label{3}
 r(j)=\sum\limits_{i\rightarrow j}\beta\frac{r(i)}{d_i}+(1-\beta)\frac{1}{n}
@@ -194,9 +189,14 @@ p_e(pr)=\frac{\sum\limits_{t}[e_t=(u,v)\wedge r_{t-1}(v)=pr]}{\sum\limits_{t}|u:
 
 (Note that we discretize the PageRank score of nodes so that the results are meaningful.)
 
-Finally, we can plot $p_e(pr)$ against $pr$ to see if there is a relation where $p_e(pr)\propto pr^\tau$, $\tau \approx 1$.
+Finally, we can plot $p_e(pr)$ against $pr$ to see if there is a relation where $p_e(pr)\propto pr^\tau$, $\tau \approx 1$. Our results are shown in Fig.
 
-If PageRank does turn out to be a better measure of importance for Preferential Attachment, we can easily modify the generation model give by \eqref{1}, substituting $\frac{d_i}{\sum\limits_{k}d_k}$ with $\frac{r_i}{\sum\limits_{k}r_k}=r_i$, which gives us
+
+
+
+
+
+As PageRank turned out to be a good measure of importance for Preferential Attachment, we can easily modify the generation model given by \eqref{1}, substituting $\frac{d_i}{\sum\limits_{k}d_k}$ with $\frac{r_i}{\sum\limits_{k}r_k}=r_i$, which gives us
 \begin{equation}
 \label{5}
 P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
@@ -204,18 +204,9 @@ P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
 
 In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. Luckily, we can use values from the previous iteration (warm start) to greatly save computation.
 
+From the preliminary experimental results, we see that one potential problem with the generation model might be that due to the way PageRank is calculated, `rich' nodes might get `too rich' as the network grows. We need to adjust parameters so that we introduce a higher probability of a new node creating random edges, and a lower probability of new edges following probability by PageRank score.
 
 \section{Discussion and Next Steps} 
-\vspace{10pt}
-Looking back at the project proposal, we have made a huge amount of progress. From the project planning and theoretical point of view, we have set a focus on what we want to do, and brainstormed to propose our PA model with PageRank that is based on a current model (PA-degree model), aims to solve a problem that the current model does not explain (As explained in section 5), and actually has a chance to do well. We feel that this is becoming an interesting topic to explore.
-
-As of now, we have pretty much completed the static analysis of snapshots of the graph. Our next step would be to start looking into the dynamic edge creation process. Our two main tasks are as follows: 
-\begin{enumerate}
-\item Use dynamic analysis to evaluate the triangle closing model and PA-degree model on our network.
-\item Compute PageRank scores, evaluate our PA-PageRank model.
-\end{enumerate}
-
-After finally finishing the data processing step, we have been enjoying good progress in an interesting project. We are looking forward to a good project.
 
 
 \bibliographystyle{plain}

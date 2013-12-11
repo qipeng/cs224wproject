@@ -1,3 +1,4 @@
 *.pyc
 snap.py
 *.so
+.*.swp
