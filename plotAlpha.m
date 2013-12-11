@@ -14,7 +14,10 @@ function alphas=plotAlpha(filename,xminall)
         alphas(month) = alpha;
     end
     
-    plot(alphas);
+    x = datenum(2001, 2:61, 1);
+    plot(x,alphas(1:60));
+    datetick('x','yy-mm');
+    axis([min(x), max(x), 0, ceil(max(alphas))]);
 end
 
 function xmin = bestxmin(pdf)
