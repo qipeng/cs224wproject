@@ -18,7 +18,7 @@ The evolution of online networks is a topic that has generated much interest in 
 
 As the largest online encyclopedic resource in human history, Wikipedia is an interesting example of an online network. Unlike social networks --- the usual object of analysis, Wikipedia is an knowledge network, representing the structure of information instead of social relationships. Therefore, studying the dynamics of Wikipedia can be a refreshing addition to network evolution reasearch.
 
-In our project, we study the evolution of Wikipedia on both static and dynamic viewpoints. Using data that consists of Wikipedia's complete edit history, we take snapshots of Wikipedia at different timepoints and compute statistics to look for trends over time and gain insight into the network structure. By comparing snapshots taken between a short period of time, we single out individual edge creation processes and study them, focusing on the choice of destination for new edges. On our Wikipedia network, we compare and evaluate previous edge destination models such as the triangle closing model and models based on Preferential Attachment. From this, we go on to propose that new edges not only choose their destinations according to the degree of a destination node, but also according to the PageRank score of that destination. We evaluate the effectiveness of PageRank as a predictor of edge destination, comparing it to node degree. From our project, we hope to find out both results that reveal interesting information about Wikipedia in particular, and results that apply to network evolution in general.
+In our project, we studied the evolution of Wikipedia on both static and dynamic viewpoints. Using data that consists of Wikipedia's complete edit history, we took snapshots of Wikipedia at different timepoints and computed statistics to look for trends over time and gain insight into the network structure. By comparing snapshots taken between a short period of time, we singled out individual edge creation processes and study them, focusing on the choice of destination for new edges. On our Wikipedia network, we compared and evaluated previous edge destination models such as the triangle closing model and models based on Preferential Attachment. From this, we went on to propose that not only its degree, but also the destination node's PageRank score can be used to explain the generative process of graph edges. We evaluated the effectiveness of PageRank as a predictor of edge destination, comparing it to node degree. From our project, we hope to find out both results that reveal interesting information about Wikipedia in particular, and results that apply to network evolution in general.
 
 \section{Prior Work}
 
@@ -32,11 +32,9 @@ The preferential attachment (PA) theory was proposed and evaluated in both \cite
 
 We see that most papers in this field, including \cite{leskovec2008microscopic}, \cite{kossinets2006empirical} and \cite{kumar2010structure} were written with social networks as the object of study. This raises the question whether their proposed models hold in other types of networks. This paper aims to explore some of these models on Wikipedia to answer this question.
 
-\section{Model}
-We model Wikipedia as an unweighted directed graph where each document is a node, and each edge $\langle u, v \rangle$ represents that there exists referential link from document $u$ to document $v$. We model Wikipedia as unweighted for model simplicity, which means we choose to ignore the fact that some documents $u$ might link to some other document $v$ multiple times.
-
-
 \section{Data Collection and\\ Processing}
+We model Wikipedia as an unweighted directed graph where each document is a node, and each edge $\langle u, v \rangle$ represents that there exists referential link from document $u$ to document $v$. We model Wikipedia as unweighted for model simplicity, ignoring multilinks between documents.
+
 Wikipedia offers free copies of its contents for mirrors and research. In most of the use cases, a snapshot is enough. But for the purpose of our project, we need the edit history. Therefore we chose the {\it pages-meta-history} dataset, which contains the complete edit history. We used the August 2006 version of English Wikipedia from the official Wikimedia archives.
 
 The dump is more than 720GB after decompression. To reduce the time cost of processing such data, for each article and for each revision, we extracted the article title, its list of outgoing links and time of revision. Next, we assigned each article an id to further minimize file sizes. This gave us a boiled down version of the information we needed. From there, we sorted all revisions along with the article id and ids of articles it links to by the revision time. After that, we were ready to generate snapshots of the Wikipedia graph over time.
@@ -46,6 +44,8 @@ Due to special characteristics of Wikipedia, we also did some additional preproc
 Also, redirections in Wikipedia may have a special effect on the graph. We decided to study this effect. To construct a redirection-free version of the graph, we removed all articles that redirected to another in the snapshots. After the removal, we moved all relevant edges to the page that it was redirected to. We noticed a very small portion of redirections that turned into a cycle. Such pages were removed completely.
 
 \section{Snapshot Analysis}
+We generate several snapshots of the evolving network at different times to observe static network features at different times. We select 1-month interval for the snapshots. From the resource perspective, they take around 10 gigabytes to store. From the result perspective, this is enough to generate relatively smooth and detailed evolution process. In the later dynamic analysis, we will use much smaller steps.
+
 A snapshot is a static view of an evolving network at a certain point in time. After generating a snapshot, we can do static analysis of its properties. In our project, we looked at the following properties of each snapshot:
 \begin{enumerate}
 \item Number of nodes and edges.
@@ -54,10 +54,10 @@ A snapshot is a static view of an evolving network at a certain point in time. A
 \item Degree distributions, including in-degree and out-degree.
 \end{enumerate}
 
-Looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. By comparing these statistics over many snapshots through time, we look for trends as the network develops. The interval between snapshots was chosen so that the snapshots are close enough to fully present the developmental stages of the network. The results are as follows:
+Looking at these properties for each snapshot gives us an idea about the structure of the graph at that time. By comparing these statistics over many snapshots through time, we look for trends as the network develops. The interval between snapshots was chosen so that the snapshots are close enough to fully present the developmental stages of the network. The results are presented in the following subsections.
 
 \subsection{Number of Nodes and Edges}
-From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It it further observed that the number of Wikipedia's nodes and edges grow by one order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the ratio of nodes to edges roughly follow a linear pattern throughout Wikipedia's growth.
+From Fig.~\ref{fig:growth}, it is evident that Wikipedia network grows almost exponentially over time in terms of both node number and edge number (especially after 2003). It is further observed that the number of Wikipedia's nodes and edges grow by one order (10x) in about 22 months. Fig.~\ref{fig:growth} shows that the ratio of nodes to edges roughly follow a linear pattern throughout Wikipedia's growth.
 
 A closer observation on the linear scale graph revealed a significant difference in node count before and after (marked with ``(R)'' in the graphs) our redirection process, which is intuitively correct as it removes conceptually redundant nodes and edges. As for edge/node ratio, after processing redirection, the edge/node ratio still follows a roughly linear growth, which indicates that the ratio of redirection nodes in the corpus is roughly constant.
 
@@ -212,11 +212,13 @@ Also, we tried plotting probability of an edge having source $u$ given $u$'s out
 \caption{Probability of outgoing edge given out-degree}\label{fig:out_pa_degree}}
 \end{figure}
 
-\section{Model Proposal -\\ PA by PageRank}
+\section{Model Proposal ---\\
+  Preferential Attachment \\
+  by PageRank}
 
 After evaluating Preferential Attachment by degree on our Wikipedia graph, we go on to propose a PA model of our own. Recall that the original PA model arose from the notation that ``the rich get richer'', with the degree of a node as a measure of importance. It is therefore natural to retain this notion of cumulative advantage, but use a different feature as the measure of importance.
 
-One motivation for trying out another measure of importance arises out of observations from results from previous experiments. In \cite{leskovec2008microscopic}, PA with in-degree was evaluated on some social networks. The findings were that $p_e(d)\propto d$ worked for some networks (for DELICIOUS, $p_e(d)\propto d^{0.9}\approx d$), but for some networks, links did not attach preferentially by degree. In the case of LINKEDIN, we see that $p_e(d)\propto d^{0.6}$ for low degree nodes and $p_e(d)\propto d^{1.2}$ for high degree nodes, suggesting that low degree and high degree nodes get sub-preferential and super-preferential treatment according to their degree, respectively. This leads one to contemplate the possibility that there exists a better measure $m$ for importance than in-degree, so that $p_e(d)\propto m$ fits well to broad cases. 
+One motivation for trying out another measure of importance arises out of observations from results from previous experiments. In \cite{leskovec2008microscopic}, PA with in-degree was evaluated on some social networks. The findings were that $p_e(d)\propto d$ worked for some networks (for Delicious, $p_e(d)\propto d^{0.9}\approx d$), but for some networks, links did not attach preferentially by degree. In the case of Linkedin, we see that $p_e(d)\propto d^{0.6}$ for low degree nodes and $p_e(d)\propto d^{1.2}$ for high degree nodes, suggesting that low degree and high degree nodes get sub-preferential and super-preferential treatment according to their degree, respectively. This leads one to contemplate the possibility that there exists a better measure $m$ for importance than in-degree, so that $p_e(d)\propto m$ fits well to broad cases. 
 
 We propose that the PageRank score of a node may be a good alternative measure of importance. Recall that PageRank conveys the idea that the importance of a node not only depends on the number of links it has, but also depends on the importance of the nodes it is linked to. This appears to be a more robust notion of importance than just the in-degree of a node.
 
@@ -249,20 +251,21 @@ Finally, we can plot $p_e(pr)$ against $pr$ to see if there is a relation where 
 
 From Fig.~\ref{fig:pa_pagerank}, we see that $p_e(pr)\propto pr^\tau$, $\tau = 1.00$. This result shows that in our Wikipedia network, new edges attach their destinations preferentially to the destination's PageRank score. Since $\tau = 1.00$, the attachment is exactly linear. The results of this experiment show that PageRank is a good measure of importance for Preferential Attachment on our Wikipedia graph.
 
-As PageRank turned out to be useful in indicating importance for attracting new edges, we can attempt to modify the PA generation model given by \eqref{1}, to be based on PageRank score rather than degree. To do this, we substitute $\frac{d_i}{\sum\limits_{k}d_k}$ with $\frac{r_i}{\sum\limits_{k}r_k}=r_i$, which gives us
+As PageRank turned out to be useful in indicating importance for attracting new edges, we attempt to modify the PA generation model given by equation~\eqref{1} to base it on PageRank score rather than degree. To do this, we substitute $\frac{d_i}{\sum\limits_{k}d_k}$ with $\frac{r_i}{\sum\limits_{k}r_k}=r_i$, which gives us
 \begin{equation}
 \label{5}
 P(j\rightarrow i)=\frac{r_i}{\sum\limits_{k}r_k}=r_i
 \end{equation}
+In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. This could be computationally intensive.  However, we can use values from the previous iteration (warm start) to speed it up.
 
-In this generation model, after the insertion of each node, PageRank needs to be run to modify the new weights. Luckily, we can use values from the previous iteration (warm start) to greatly save computation.
 \begin{figure}[ht]
 \centering{
 \includegraphics[width=0.8\linewidth]{./graphs/deg_dist_pr}
 }
 \caption{Degree distribution of PA PageRank} \label{fig:pa_pr_deg_dist}
 \end{figure}
-From the preliminary experimental results, we see that one potential problem with the generation model might be that due to the way PageRank is calculated, `rich' nodes might get `too rich' as the network grows. We need to adjust parameters so that we introduce a higher probability of a new node creating random edges, and a lower probability of new edges following probability by PageRank score.
+
+Fig.~\ref{fig:pa_pr_deg_dist} shows our experimental results. We see one problem with the generation model. Due to the way PageRank is calculated, `rich' nodes might get `too rich' as the network grows. We need to adjust parameters so that we introduce a higher probability of a new node creating random edges, and a lower probability of new edges following probability by PageRank score.
 
 \section{Conclusion} 
 In our project, we studied the static and dynamic properties of the Wikipedia network. For static analysis, we took snapshots of the network at different timepoints in Wikipedia's history, and analyzed properties such as size, diameter, connected component sizes and degree distributions. Our findings show that Wikipedia is a scale free network with properties similar to the social networks studied in other research papers. From our results, we conclude that a knowledge network such as Wikipedia shares many properties with social networks.
