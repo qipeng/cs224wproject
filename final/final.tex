@@ -69,7 +69,16 @@ A closer observation on the linear scale graph revealed a significant difference
 \end{figure*}
 
 \subsection{Degree Distribution}
-Fig.~\ref{fig:degree} shows the degree, in-degree and out-degree distribution of nodes in our graph over time.
+
+REVIEW PENDING \&\& MOVE AFTER 5.4
+
+From this point on, we consider only Wikipedia networks with redirection removed. Previous observations has given insight on the effect this process has on the network. It has proved that removing the redirection is a natural process that does not have a major effects on the network.
+
+Fig.~\ref{fig:degree} shows the distribution of degree, in-degree and out-degree of nodes in Wikipedia network over time. Each color represents the number of nodes that fall in a certain range of values. 
+
+From the figures, it appears that the distribution is relatively stable despite the number of nodes grow exponentially. To further investigate Wikipedia's scale-free properties, we drew degree distributions of the Wikipedia network (without aggregation) at certain time points. Fig.~\ref{fig:deg_dist} shows the snapshot on XXXX. It clearly satisfies power law. 
+
+Further, we estimated the $\alpha$ exponent over time. You can find the trend of $\alpha$ in fig.~\ref{fig:alpha_trend}. At the beginning, there were too little nodes and $\alpha$ value is much larger than in common established networks. But $\alpha$ goes down quickly. Within a year since Wikipedia's origin, it is not far away from its current value. $\alpha$ converges to XX. 
 
 \begin{figure*}
 \centering{
@@ -77,7 +86,6 @@ Fig.~\ref{fig:degree} shows the degree, in-degree and out-degree distribution of
 }
 \caption{Degree, In-Degree and Out-Degree Distributions over Time \label{fig:degree}}
 \end{figure*}
-
 
 \subsection{Diameter}
 As shown in Fig.~\ref{fig:diameter}, the diameter of the graph increases first, and then decreases to a constant range and stabilizes. The initial large diameter might be caused by the disconnectivity of the graph, but the final stabilization shows that the diameter of our Wikipedia network does not increase as its nodes and edges increase, and that Wikipedia is a scale-free network. It is not surprising that after processing redirections, the diameter of the graph shrinks by about 1, the common length of redirection chains.
