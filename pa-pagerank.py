@@ -34,9 +34,14 @@ if __name__ == "__main__":
         #     addEdgePageRank(G, i, pageRank)
         #     addEdgePageRank(G, i, pageRank)
 
-        addEdgePageRank(G, i)
-        addEdgePageRank(G, i)
+        t = random.randint(1,5)
+        for x in range(t):
+            addEdgePageRank(G, i)
 
         if (i%1000==0): print i
 
-    snap.PlotInDegDistr(G, "example", "In-degree Distribution")
+    f = open('pa-pagerank_degrees.txt','w')
+    for n in G.Nodes():
+        f.write(str(n.GetDeg())+"\n")
+
+    f.close()
