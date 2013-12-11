@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.12)  10 DEC 2013 15:23
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.7.12)  10 DEC 2013 16:25
 entering extended mode
 **final.tex
 (Z:\private\224w\project\cs224wproject\final\final.tex
@@ -416,8 +416,12 @@ ut line 122.
 File: ./graphs/triangles.pdf Graphic file (type pdf)
 
 <use ./graphs/triangles.pdf>
-Package pdftex.def Info: ./graphs/triangles.pdf used on input line 129.
+Package pdftex.def Info: ./graphs/triangles.pdf used on input line 130.
 (pdftex.def)             Requested size: 169.63876pt x 146.78168pt.
+ [4 <Z:/private/224w/project/cs224wproject/final/graphs/p3-1.pdf> <Z:/private/2
+24w/project/cs224wproject/final/graphs/p3-2.pdf> <Z:/private/224w/project/cs224
+wproject/final/graphs/dynamic.pdf> <Z:/private/224w/project/cs224wproject/final
+/graphs/distance_pie-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <./graphs/15_tri.eps>
 (epstopdf)                    date: 2013-12-08 20:47:00
 (epstopdf)                    size: 14031 bytes
@@ -426,32 +430,28 @@ Package epstopdf Info: Source file: <./graphs/15_tri.eps>
 (epstopdf)                    size: 4523 bytes
 (epstopdf)             Command: <epstopdf --outfile=./graphs/15_tri-eps-convert
 ed-to.pdf ./graphs/15_tri.eps>
-(epstopdf)             \includegraphics on input line 135.
+(epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
-<./graphs/15_tri-eps-converted-to.pdf, id=149, 599.23875pt x 317.185pt>
+<./graphs/15_tri-eps-converted-to.pdf, id=236, 599.23875pt x 317.185pt>
 File: ./graphs/15_tri-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ./graphs/15_tri-eps-converted-to.pdf>
 Package pdftex.def Info: ./graphs/15_tri-eps-converted-to.pdf used on input lin
-e 135.
+e 136.
 (pdftex.def)             Requested size: 192.83322pt x 129.9283pt.
- [4 <Z:/private/224w/project/cs224wproject/final/graphs/p3-1.pdf> <Z:/private/2
-24w/project/cs224wproject/final/graphs/p3-2.pdf> <Z:/private/224w/project/cs224
-wproject/final/graphs/dynamic.pdf> <Z:/private/224w/project/cs224wproject/final
-/graphs/distance_pie-eps-converted-to.pdf>] [5 <Z:/private/224w/project/cs224wp
-roject/final/graphs/triangles.pdf> <Z:/private/224w/project/cs224wproject/final
-/graphs/15_tri-eps-converted-to.pdf>] (Z:\private\224w\project\cs224wproject\fi
-nal\final.bbl) [6]
+ [5 <Z:/private/224w/project/cs224wproject/final/graphs/triangles.pdf> <Z:/priv
+ate/224w/project/cs224wproject/final/graphs/15_tri-eps-converted-to.pdf>]
+(Z:\private\224w\project\cs224wproject\final\final.bbl [6]) [7]
 (Z:\private\224w\project\cs224wproject\final\final.aux) ) 
 Here is how much of TeX's memory you used:
  2960 strings out of 494045
  40306 string characters out of 3152017
- 112022 words of memory out of 3000000
+ 104022 words of memory out of 3000000
  6176 multiletter control sequences out of 15000+200000
  11541 words of font info for 45 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 42i,7n,24p,1131b,336s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,7n,24p,1131b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 <F:/Software/MiKTeX/fo
 nts/type1/public/amsfonts/cm/cmbx12.pfb><F:/Software/MiKTeX/fonts/type1/public/
 amsfonts/cm/cmex10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cmextra/
@@ -463,9 +463,9 @@ onts/cm/cmr10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 X/fonts/type1/public/amsfonts/cm/cmr7.pfb><F:/Software/MiKTeX/fonts/type1/publi
 c/amsfonts/cm/cmsy10.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cms
 y7.pfb><F:/Software/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on final.pdf (6 pages, 394038 bytes).
+Output written on final.pdf (7 pages, 396497 bytes).
 PDF statistics:
- 298 PDF objects out of 1000 (max. 8388607)
+ 303 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

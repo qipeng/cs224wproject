@@ -122,8 +122,9 @@ For the first item, we treat out network as undirected and run depth-limited BFS
     \includegraphics[scale=0.4]{./graphs/distance_pie.eps}
     \caption{Distance between source and destination of new edges} \label{fig:portion123}
 \end{figure}
+From Fig.~\ref{fig:portion123}, we see that the majority of new edges are between nodes of distance 2, taking up about 70\% of all edges. The result that a large portion of new edges are triangle-closing edges is similar to the findings of \cite{leskovec2008microscopic}. This similarity suggests that both social networks and knowledge networks have this property. Also, the fact that most new edges close triangles makes it more interesting to look into what types of triangles these new edges tend to close.
 
-Then, we revert to treating the graph as directed to study the triangle closing case. Note that the same triangle closing case on an undirected graph can turn into four possible types of cases for a directed graph, as shown below: 
+To study specific cases for triangle closing, we revert to treating the graph as directed. Note that the same triangle closing case on an undirected graph can turn into four possible types of cases for a directed graph, as shown below: 
 \begin{figure}[H]
     \centering
         \includegraphics[scale = 0.35, trim = 2cm 14cm 2cm 1cm]{./graphs/triangles.pdf}
@@ -136,7 +137,19 @@ We look into which kind of triangles the new edges tend to close. Also, note tha
     \caption{Combination frequency of triangles closed} \label{fig:combo15}
 \end{figure}
 
-From Fig.~\ref{fig:combo15}, we see that....
+First, we analyze the four basic types of triangles. Type 1 triangle closing is analogous to creating a `shortcut' in reference. Type 2 and type 3 are new references between `peers', while closing a type 4 triangle creates a cycle of references. 
+
+Aggregating over all cases, type 1 and type 2 triangles are the most popular. However, type 1 triangles often come in combinations with other triangles, while standalone type 2 triangles account for 10\% of all cases, the highest among the four types.
+
+This suggest that shortcut edges are often created, and that shortcuts are more likely when the nodes involved are closely cross-referenced. On the other hand, connections between peers of `reference children' are also common, and the `children' do not need to have back-references from their parents to get connected to each other.
+
+We also see that type 4 triangles are least popular, whether standalone or in combination. Note that closing a type 4 triangle creates a cycle of references. The scarcity of pure cycle references makes sense in a network analysis point of view.
+
+From Fig.~\ref{fig:combo15}, we see that two-thirds of the triangles closed have the combination `1+2', which leads to the following intuition: If node B and node C reference each other, and node A references node B, then node A will likely create a reference to node C as well.
+
+Another popular combination is `1+3', which means that if node A and node B reference each other, and node A points to node C, then node B is likely to generate a new edge also pointing to node C.
+
+The two cases above can be summarized like so: If two Wikipedia nodes reference each other, then they are likely to generate edges pointing to the same node, and are likely to attract edges coming from the same node. We believe that this observation from data makes sense in the real world.
 
 \subsection{Preferential Attachment}
 In this section, we study Preferential Attachment(PA) in edge destination selection. The PA model is described as when a new node $j$ joins the network, it creates a constant number of edges, where the edge destination is proportional to the destination's degree.
